@@ -45,3 +45,6 @@ fp-info-cache
 
 # Pio
 .pio
+
+# Docs
+_build

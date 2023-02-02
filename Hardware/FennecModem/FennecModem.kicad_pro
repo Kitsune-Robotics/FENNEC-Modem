@@ -320,6 +320,14 @@
     [
       "8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9",
       ""
+    ],
+    [
+      "cf3d0f33-271b-4df1-9d86-6d97bc01010a",
+      "Radio"
+    ],
+    [
+      "818ae4cb-50e5-4c8b-88f5-6f1511246083",
+      "ADC-DAC"
     ]
   ],
   "text_variables": {}

@@ -18,7 +18,7 @@ preflight:
     - name: "ISSUE"
       command: "date '+%Y-%m-%d'"
     - name: "KENWOODFOX_3DMODELS" # My custom libs!
-      command: "echo 'Hardware/APRN_Relay/Libraries/kenwoodfox-kicad-libraries/3d'"
+      command: "echo 'Hardware/FennecModem/Libraries/kenwoodfox-kicad-libraries/3d'"
 
 filters:
   - name: only_jlc_parts

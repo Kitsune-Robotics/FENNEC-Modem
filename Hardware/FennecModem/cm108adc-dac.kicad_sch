@@ -1,0 +1,18 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid 8719fb0e-cfd9-4e3e-815a-01a5e8a2fdc2)
+
+  (paper "A4")
+
+  (title_block
+    (title "Fennec Modem")
+    (date "${ISSUE}")
+    (rev "${REVISION}")
+    (company "Kitsune Scientific")
+    (comment 4 "${FULL_REVISION}")
+  )
+
+  (lib_symbols
+  )
+
+)

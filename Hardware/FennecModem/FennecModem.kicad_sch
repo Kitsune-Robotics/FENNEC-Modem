@@ -4,6 +4,14 @@
 
   (paper "A4")
 
+  (title_block
+    (title "Fennec Modem")
+    (date "${ISSUE}")
+    (rev "${REVISION}")
+    (company "Kitsune Scientific")
+    (comment 4 "${FULL_REVISION}")
+  )
+
   (lib_symbols
     (symbol "KenwoodFox:KITSUNE_LOGO" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
       (property "Reference" "#L" (id 0) (at 0 4.2916 0)
@@ -710,7 +718,7 @@
   (symbol (lib_id "KenwoodFox:KITSUNE_LOGO") (at 278.13 175.895 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 94279616-57a4-4fdb-a78f-22414aa7050f)
-    (property "Reference" "#L?" (id 0) (at 278.13 171.6034 0)
+    (property "Reference" "#L101" (id 0) (at 278.13 171.6034 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "KITSUNE_LOGO" (id 1) (at 278.13 182.245 0)
@@ -724,13 +732,111 @@
     )
   )
 
+  (sheet (at 74.295 67.945) (size 31.115 57.15) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 818ae4cb-50e5-4c8b-88f5-6f1511246083)
+    (property "Sheet name" "ADC-DAC" (id 0) (at 74.295 67.2334 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "cm108adc-dac.kicad_sch" (id 1) (at 74.295 125.6796 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
+  (sheet (at 130.175 67.31) (size 32.385 58.42) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid cf3d0f33-271b-4df1-9d86-6d97bc01010a)
+    (property "Sheet name" "Radio" (id 0) (at 130.175 66.5984 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "radio.kicad_sch" (id 1) (at 130.175 126.3146 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
   (sheet_instances
     (path "/" (page "1"))
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a" (page "2"))
+    (path "/818ae4cb-50e5-4c8b-88f5-6f1511246083" (page "3"))
   )
 
   (symbol_instances
     (path "/94279616-57a4-4fdb-a78f-22414aa7050f"
-      (reference "#L?") (unit 1) (value "KITSUNE_LOGO") (footprint "")
+      (reference "#L101") (unit 1) (value "KITSUNE_LOGO") (footprint "")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/5ed70f5a-9bfb-4732-b4b0-7d19d4f1f636"
+      (reference "#PWR0101") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/0166da6c-94ff-4d2b-8b5e-86a28e7bce28"
+      (reference "#PWR0102") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/a24a83ba-fd01-419f-8bbb-a66fea701abc"
+      (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/46b1ab82-9a02-4f59-b80e-ef33dbe56a9b"
+      (reference "#PWR0104") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/d6520202-0ebe-4a20-b4dd-d2df890fa3ef"
+      (reference "#PWR0105") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/88d4e7aa-99e2-4daa-8fe5-7cd5f0ed8364"
+      (reference "#PWR0106") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/35c8f909-8923-486e-b8aa-51da59e97d87"
+      (reference "#PWR0107") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/304c923a-36e8-48d0-8ef5-04dbbe1da7c2"
+      (reference "#PWR0108") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/ee0322de-c76a-42ad-a3f7-11522c74d0b4"
+      (reference "#PWR0109") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/0df8b3bd-b6f1-4186-bb72-8bb79345596e"
+      (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/165374fd-7e76-4f05-b8cb-47c94e7d8ffe"
+      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/1f09fd58-bfa4-47f8-80eb-35167f865270"
+      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/8fe6670a-65d4-4163-890a-8da69d672cc6"
+      (reference "C201") (unit 1) (value "4.7μf") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/e3510515-5063-4344-b3f9-730e896be801"
+      (reference "C202") (unit 1) (value "0.1μf") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/ddfbd8c2-6aac-4979-aa9d-3d1c6bf0d369"
+      (reference "D?") (unit 1) (value "RX") (footprint "LED_SMD:LED_0603_1608Metric")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/fe83e7fb-0b95-44ab-818b-1756453b8ab6"
+      (reference "D?") (unit 1) (value "TX") (footprint "LED_SMD:LED_0603_1608Metric")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/f3cf3aac-2333-4ed9-8be9-562f2a4c4074"
+      (reference "FL201") (unit 1) (value "LFCN-490") (footprint "Filter:Filter_Mini-Circuits_FV1206")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/eb263348-7250-40db-b9e3-039ac76d6930"
+      (reference "J201") (unit 1) (value "Conn_Coaxial") (footprint "Connector_Coaxial:SMA_Amphenol_132289_EdgeMount")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/717c7c6f-9f9a-4dcb-9324-e20a77949e93"
+      (reference "JP201") (unit 1) (value "H/L Jumper") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/1e3d92e0-cb4a-4950-bb4c-d1af0a08a3db"
+      (reference "R201") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/391c5615-b4de-4570-8916-7eac28667399"
+      (reference "R?") (unit 1) (value "180") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/ad59940b-8504-44eb-8ecc-bcbbc8ae82e8"
+      (reference "R?") (unit 1) (value "47R") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/e60948b3-af21-4763-acf7-24df2d399918"
+      (reference "R?") (unit 1) (value "180") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/cf3d0f33-271b-4df1-9d86-6d97bc01010a/fb24d8dc-2ffd-4d7d-b9eb-a6628c5a70c8"
+      (reference "U201") (unit 1) (value "DRA818V") (footprint "KenwoodFox:DRA818V")
     )
   )
 )
