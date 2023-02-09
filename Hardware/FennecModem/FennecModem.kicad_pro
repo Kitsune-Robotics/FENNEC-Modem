@@ -328,6 +328,10 @@
     [
       "818ae4cb-50e5-4c8b-88f5-6f1511246083",
       "ADC-DAC"
+    ],
+    [
+      "eb87b44c-c725-4d55-94af-4b96e4b91348",
+      "USB-Serial"
     ]
   ],
   "text_variables": {}
