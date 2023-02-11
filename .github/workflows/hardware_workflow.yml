@@ -12,7 +12,7 @@ on:
       - "Docs/**"
 
 jobs:
-  KiCad_Hardware:
+  Modem_Hardware:
     runs-on: ubuntu-latest
     name: KiCad Hardware
 
@@ -36,21 +36,40 @@ jobs:
       - name: upload results
         uses: actions/upload-artifact@v2
         with:
-          name: Board-Hardware
+          name: Modem-Hardware
           path: _hardwareOutput
 
-      - name: Discord notification if failed
-        if: ${{ failure() }}
-        uses: appleboy/discord-action@master
+  BackPlane_Hardware:
+    runs-on: ubuntu-latest
+    name: KiCad Hardware
+
+    steps:
+      - uses: actions/checkout@v2
         with:
-          webhook_id: ${{ secrets.WEBHOOK_ID }}
-          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-          args: "Building new board failed, most likely a DRC check."
+          fetch-depth: 0
+          submodules: true
+
+      - uses: INTI-CMNB/KiBot@v2_k6
+        with:
+          # Config file
+          config: Hardware/config.kibot.yaml
+          # Prefix for output in config file.
+          dir: _hardwareOutput
+
+          # Hardware Files
+          schema: "Hardware/BackPlane/BackPlane.kicad_sch"
+          board: "Hardware/BackPlane/BackPlane.kicad_pcb"
+
+      - name: upload results
+        uses: actions/upload-artifact@v2
+        with:
+          name: Backplane-Hardware
+          path: _hardwareOutput
 
   make_docs:
     runs-on: ubuntu-latest
     name: Build Docs
-    needs: [KiCad_Hardware]
+    needs: [BackPlane_Hardware, Modem_Hardware]
 
     steps:
       - name: Setup Python
@@ -73,7 +92,12 @@ jobs:
       # Download artifacts from other builds
       - uses: actions/download-artifact@v2
         with:
-          name: Board-Hardware
+          name: BackPlane-Hardware
+          path: _hardwareOutput
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: Modem-Hardware
           path: _hardwareOutput
 
       # Convert svg graphics
@@ -92,7 +116,7 @@ jobs:
     # publish only to devs
     runs-on: ubuntu-latest
     name: Dev-Publish
-    needs: [make_docs, KiCad_Hardware]
+    needs: [make_docs, BackPlane-Hardware, Modem-Hardware]
 
     steps:
       # Download artifacts
@@ -102,7 +126,11 @@ jobs:
 
       - uses: actions/download-artifact@v2
         with:
-          name: Board-Hardware
+          name: BackPlane-Hardware
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: Modem-Hardware
 
       - name: send custom message with args
         uses: appleboy/discord-action@master
@@ -124,7 +152,7 @@ jobs:
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     name: Publish
-    needs: [make_docs, KiCad_Hardware]
+    needs: [make_docs, BackPlane-Hardware, Modem-Hardware]
 
     steps:
       # Be in our repo
@@ -139,7 +167,11 @@ jobs:
 
       - uses: actions/download-artifact@v2
         with:
-          name: Board-Hardware
+          name: BackPlane-Hardware
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: Modem-Hardware
 
       - run: mkdir -p _staging/
 
@@ -148,8 +180,8 @@ jobs:
       - run: cp *.step _staging/
 
       # Copy gerbers
-      - run: cp PCBWay/*.zip _staging/Board-$(git rev-parse --short HEAD)-PCBWay.zip
-      - run: cp JLCPCB/*.zip _staging/Board-$(git rev-parse --short HEAD)-JLCPCB.zip
+      - run: cp PCBWay/*.zip _staging/
+      - run: cp JLCPCB/*.zip _staging/
 
       - name: Upload Docs to release
         uses: svenstaro/upload-release-action@v2
