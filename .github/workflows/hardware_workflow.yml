@@ -116,7 +116,7 @@ jobs:
     # publish only to devs
     runs-on: ubuntu-latest
     name: Dev-Publish
-    needs: [make_docs, BackPlane-Hardware, Modem-Hardware]
+    needs: [make_docs, BackPlane_Hardware, Modem_Hardware]
 
     steps:
       # Download artifacts
@@ -152,7 +152,7 @@ jobs:
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     name: Publish
-    needs: [make_docs, BackPlane-Hardware, Modem-Hardware]
+    needs: [make_docs, BackPlane_Hardware, Modem_Hardware]
 
     steps:
       # Be in our repo
