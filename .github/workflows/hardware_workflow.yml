@@ -1,4 +1,4 @@
-name: Display Hardware
+name: KiCAD
 
 on:
   push:
@@ -9,186 +9,128 @@ on:
   pull_request:
     paths:
       - "Hardware/**"
-      - "Docs/**"
 
 jobs:
-  Modem_Hardware:
+  KiCad_Hardware:
     runs-on: ubuntu-latest
-    name: Build Modem
+    name: Fennec Modem Card Hardware
+
+    strategy:
+      matrix:
+        variant:
+          - FennecModem
+          - BackPlane
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
           submodules: true
 
-      - uses: INTI-CMNB/KiBot@v2_k6
+      - uses: INTI-CMNB/KiBot@v2_k7
         with:
           # Config file
-          config: Hardware/config.kibot.yaml
+          config: Hardware/${{ matrix.variant }}.yaml
           # Prefix for output in config file.
           dir: _hardwareOutput
 
           # Hardware Files
-          schema: "Hardware/FennecModem/FennecModem.kicad_sch"
-          board: "Hardware/FennecModem/FennecModem.kicad_pcb"
+          schema: "Hardware/${{ matrix.variant }}/${{ matrix.variant }}.kicad_sch"
+          board: "Hardware/${{ matrix.variant }}/${{ matrix.variant }}.kicad_pcb"
 
       - name: upload results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
-          name: Modem-Hardware
+          name: ${{ matrix.variant }}
           path: _hardwareOutput
 
-  BackPlane_Hardware:
-    runs-on: ubuntu-latest
-    name: Build Backplane
-
-    steps:
-      - uses: actions/checkout@v2
+      - name: Discord notification if failed
+        if: ${{ failure() }}
+        uses: appleboy/discord-action@master
         with:
-          fetch-depth: 0
-          submodules: true
-
-      - uses: INTI-CMNB/KiBot@v2_k6
-        with:
-          # Config file
-          config: Hardware/config.kibot.yaml
-          # Prefix for output in config file.
-          dir: _hardwareOutput
-
-          # Hardware Files
-          schema: "Hardware/BackPlane/BackPlane.kicad_sch"
-          board: "Hardware/BackPlane/BackPlane.kicad_pcb"
-
-      - name: upload results
-        uses: actions/upload-artifact@v2
-        with:
-          name: BackPlane-Hardware
-          path: _hardwareOutput
-
-  make_docs:
-    runs-on: ubuntu-latest
-    name: Build Docs
-    needs: [BackPlane_Hardware, Modem_Hardware]
-
-    steps:
-      - name: Setup Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.10"
-          architecture: x64
-
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          submodules: true
-
-      # Do not cache
-      - run: sudo apt install texlive-latex-recommended texlive-latex-extra texlive-pictures pandoc rename latexmk inkscape imagemagick
-
-      - name: Install requirements
-        run: pip install -r Docs/requirements.txt
-
-      # Download artifacts from other builds
-      - uses: actions/download-artifact@v2
-        with:
-          name: BackPlane-Hardware
-          path: _hardwareOutput
-
-      - uses: actions/download-artifact@v2
-        with:
-          name: Modem-Hardware
-          path: _hardwareOutput
-
-      # Convert svg graphics
-      - run: convert -density 300 _hardwareOutput/FennecModem-schematic.svg _hardwareOutput/FennecModem-schematic.png
-
-      - run: cd Docs && make latexpdf
-
-      - run: mv Docs/_build/latex/*.pdf Docs/_build/latex/Board-Manual.pdf
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: Board-Manual
-          path: Docs/_build/latex/Board-Manual.pdf
+          webhook_id: ${{ secrets.WEBHOOK_ID }}
+          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+          args: "Building new board failed, most likely a DRC check."
 
   dev-publish:
     # publish only to devs
     runs-on: ubuntu-latest
     name: Dev-Publish
-    needs: [make_docs, BackPlane_Hardware, Modem_Hardware]
+    # needs: [make_docs, KiCad_Hardware]
+    needs: [KiCad_Hardware]
+
+    strategy:
+      matrix:
+        variant:
+          - FennecModem
+          - BackPlane
 
     steps:
       # Download artifacts
-      - uses: actions/download-artifact@v2
-        with:
-          name: Board-Manual
+      # - uses: actions/download-artifact@v3
+      #   with:
+      #     name: Board-Manual
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
-          name: BackPlane-Hardware
+          name: ${{ matrix.variant }}
 
-      - uses: actions/download-artifact@v2
-        with:
-          name: Modem-Hardware
-
-      - name: send custom message with args
-        uses: appleboy/discord-action@master
-        with:
-          webhook_id: ${{ secrets.WEBHOOK_ID }}
-          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-          file: "Board-Manual.pdf"
-          args: Fennec Modem got an update!
+      # - name: send custom message with args
+      #   uses: appleboy/discord-action@master
+      #   with:
+      #     webhook_id: ${{ secrets.WEBHOOK_ID }}
+      #     webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+      #     file: "Board-Manual.pdf"
+      #     args: Display Board Just got an update!
 
       - name: send custom message with args
         uses: appleboy/discord-action@master
         with:
           webhook_id: ${{ secrets.WEBHOOK_ID }}
           webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-          file: "FennecModem-3D_top.png"
-
-      - name: send custom message with args
-        uses: appleboy/discord-action@master
-        with:
-          webhook_id: ${{ secrets.WEBHOOK_ID }}
-          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-          file: "BackPlane-3D_top.png"
+          file: "${{ matrix.variant }}-3D_top.png"
+          args: ${{ matrix.variant }}
 
   publish:
     # Only run on tags
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     name: Publish
-    needs: [make_docs, BackPlane_Hardware, Modem_Hardware]
+    # needs: [make_docs, KiCad_Hardware]
+    needs: [KiCad_Hardware]
+
+    strategy:
+      matrix:
+        variant:
+          - Buisness Card
 
     steps:
       # Be in our repo
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       # Download artifacts
-      - uses: actions/download-artifact@v2
-        with:
-          name: Board-Manual
+      # - uses: actions/download-artifact@v3
+      #   with:
+      #     name: Board-Manual
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
-          name: BackPlane-Hardware
-
-      - uses: actions/download-artifact@v2
-        with:
-          name: Modem-Hardware
+          name: ${{ matrix.variant }}
 
       - run: mkdir -p _staging/
 
-      - run: cp *.pdf _staging/
+      # - run: cp *.pdf _staging/
 
       - run: cp *.step _staging/
 
       # Copy gerbers
-      - run: cp PCBWay/*.zip _staging/
-      - run: cp JLCPCB/*.zip _staging/
+      - run: cp PCBWay/*.zip "_staging/${{ matrix.variant }}-$(git rev-parse --short HEAD)-PCBWay.zip"
+      - run: cp JLCPCB/*.zip "_staging/${{ matrix.variant }}-$(git rev-parse --short HEAD)-JLCPCB.zip"
+
+      # Copy BOMs
+      - run: cp *.csv _staging/
 
       - name: Upload Docs to release
         uses: svenstaro/upload-release-action@v2
@@ -198,5 +140,5 @@ jobs:
           tag: ${{ github.ref }}
           overwrite: true
           prerelease: true
-          body: "SNHU EG-310, Automated with github ci/cd."
+          body: "Kitsune Robotics, Automated with github ci/cd."
           file_glob: true
