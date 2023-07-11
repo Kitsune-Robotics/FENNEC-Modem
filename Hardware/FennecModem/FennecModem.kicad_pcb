@@ -6894,7 +6894,7 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 90 0 0))
     )
-    (model "/home/joe/git/kitsune_robotics/FennecModem/Hardware/BackPlane/CAD/Rails-Fennec End.step"
+    (model "${KIPRJMOD}/Libraries/fennec-modem-libraries/3d/Rails-Fennec End.step"
       (offset (xyz 0 110 -0.9))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 -90 -90))
