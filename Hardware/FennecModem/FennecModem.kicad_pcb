@@ -6889,10 +6889,15 @@
         )
       )
     )
-    (model "${KENWOODFOX_3DMODELS}/EBM15DSEH.step" hide
+    (model "${KENWOODFOX_3DMODELS}/EBM15DSEH.step"
       (offset (xyz 0 -11 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 90 0 0))
+    )
+    (model "/home/joe/git/kitsune_robotics/FennecModem/Hardware/BackPlane/CAD/Rails-Fennec End.step"
+      (offset (xyz 0 110 -0.9))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 -90 -90))
     )
   )
 
