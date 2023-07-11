@@ -6889,7 +6889,7 @@
         )
       )
     )
-    (model "${KENWOODFOX_3DMODELS}/EBM15DSEH.step"
+    (model "${KENWOODFOX_3DMODELS}/EBM15DSEH.step" hide
       (offset (xyz 0 -11 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 90 0 0))
