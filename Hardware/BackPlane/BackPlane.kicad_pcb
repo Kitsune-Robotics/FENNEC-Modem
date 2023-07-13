@@ -5523,6 +5523,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
+    (model "${KIPRJMOD}/CAD/FennecModem-3D.step"
+      (offset (xyz -150 0.5 161))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (footprint "KenwoodFox:EBM15DSEH" (layer "F.Cu")
