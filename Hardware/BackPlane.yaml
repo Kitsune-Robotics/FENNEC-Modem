@@ -53,7 +53,7 @@ outputs:
       rotate_z: -3
       move_y: -4
       zoom: -2
-      wait_render: 20
+      wait_render: 90
       width: 900
 
   # ======
