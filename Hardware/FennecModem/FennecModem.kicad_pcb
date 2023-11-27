@@ -10915,7 +10915,7 @@
   (gr_text "→" (at 172.4 54.9 45) (layer "F.SilkS") (tstamp 5502eaff-1e4b-4bcd-91f1-8766e055b78c)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (gr_text "${FULL_REVISION}" (at 125 84.25) (layer "F.SilkS") (tstamp 55e25d76-1a38-40b9-87aa-49695d0d926e)
+  (gr_text "${FULL_REVISION}" (at 125 85.5) (layer "F.SilkS") (tstamp 55e25d76-1a38-40b9-87aa-49695d0d926e)
     (effects (font (size 1.5 1.5) (thickness 0.3) bold) (justify top))
   )
   (gr_text "→" (at 173 52.5 90) (layer "F.SilkS") (tstamp 6e5dd83a-8c67-4573-b858-fa81dc626e35)
