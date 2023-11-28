@@ -1,3 +1,6 @@
 [submodule "Hardware/FennecModem/Libraries/kenwoodfox-kicad-libraries"]
 	path = Hardware/FennecModem/Libraries/kenwoodfox-kicad-libraries
 	url = https://github.com/KenwoodFox/kenwoodfox-kicad-libraries.git
+[submodule "Hardware/BackPlane/Libraries/kenwoodfox-kicad-libraries"]
+	path = Hardware/BackPlane/Libraries/kenwoodfox-kicad-libraries
+	url = https://github.com/KenwoodFox/kenwoodfox-kicad-libraries.git

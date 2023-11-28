@@ -12,3 +12,11 @@ The Fennec Modem is designed with APRN in mind! But is in no means only limted t
  - [x] Packet
  - [ ] APRS
  - [ ] Other SSTV Formats
+
+
+# Thank You!
+
+Without the resources from other hams on the internet, I don't know if i would ever get this project done!
+
+https://github.com/handiko/Dorji-TX-Shield
+http://squirrelengineering.com/arduino/dra818v-aprs-144-390mhz/
