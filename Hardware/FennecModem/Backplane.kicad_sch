@@ -403,11 +403,16 @@
 
   (no_connect (at 113.665 122.555) (uuid 06dc207a-7d1f-4357-aa8b-2b41e4a21f47))
   (no_connect (at 80.645 104.775) (uuid 35cda2df-e5cc-446f-93d1-6b81454573ee))
+  (no_connect (at 80.645 120.015) (uuid 3f74a166-9f23-4116-94da-4bddadb8ae1a))
   (no_connect (at 113.665 130.175) (uuid 47a5d7b6-858c-44d5-b1ef-a167cde16107))
   (no_connect (at 113.665 90.805) (uuid 51f2cee4-7f1b-4a18-a7de-e9a3e1679427))
+  (no_connect (at 80.645 109.855) (uuid 55783d5a-01fd-4fa1-9d22-ee21cc1bbfad))
   (no_connect (at 80.645 102.235) (uuid 5ea4917e-8bf4-4382-850d-9c3cf950f189))
   (no_connect (at 80.645 95.885) (uuid 624e3df5-e3b8-4435-a7c3-b8824b0021f5))
   (no_connect (at 113.665 93.345) (uuid 745931f8-5da5-4274-8fcc-a9493ca2a985))
+  (no_connect (at 80.645 114.935) (uuid 7ab5a7eb-f410-42a5-9482-67444e514bf1))
+  (no_connect (at 80.645 117.475) (uuid 92dc3a51-6ed8-4b54-80dc-36b42f58b52a))
+  (no_connect (at 80.645 112.395) (uuid a220534d-54b0-4824-ad74-8f751ffe5a9f))
   (no_connect (at 80.645 93.345) (uuid a7737e11-a9cf-4630-a85a-c8aead88d693))
   (no_connect (at 113.665 127.635) (uuid d5fe7445-9b5f-4ebe-9e1a-90243d090878))
   (no_connect (at 113.665 95.885) (uuid e2903f51-0e3c-48e4-bca4-9b2b324ebc74))
@@ -582,7 +587,7 @@
   (symbol (lib_id "power:+12V") (at 97.155 76.835 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0aedd781-1bb9-4f8b-bd73-f20bd5b8f76e)
-    (property "Reference" "#PWR0117" (at 97.155 80.645 0)
+    (property "Reference" "#PWR0308" (at 97.155 80.645 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 97.155 73.025 0)
@@ -597,9 +602,6 @@
     (pin "1" (uuid a2437608-da7a-414d-9181-61b05b0a97b5))
     (instances
       (project "FennecModem"
-        (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9"
-          (reference "#PWR0117") (unit 1)
-        )
         (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/192ed9e7-ecb8-4622-a83a-67936d551760"
           (reference "#PWR0308") (unit 1)
         )
@@ -615,7 +617,7 @@
   (symbol (lib_id "power:GND") (at 97.155 144.145 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1c487491-aa7b-40f4-9526-1d995531891e)
-    (property "Reference" "#PWR0116" (at 97.155 150.495 0)
+    (property "Reference" "#PWR0307" (at 97.155 150.495 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 97.155 147.955 0)
@@ -630,9 +632,6 @@
     (pin "1" (uuid 28e204f8-ad71-413d-968a-e09d82abfb8a))
     (instances
       (project "FennecModem"
-        (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9"
-          (reference "#PWR0116") (unit 1)
-        )
         (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/192ed9e7-ecb8-4622-a83a-67936d551760"
           (reference "#PWR0307") (unit 1)
         )
@@ -726,9 +725,6 @@
         )
       )
       (project "FennecModem"
-        (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9"
-          (reference "C107") (unit 1)
-        )
         (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/192ed9e7-ecb8-4622-a83a-67936d551760"
           (reference "C303") (unit 1)
         )
@@ -763,9 +759,6 @@
         )
       )
       (project "FennecModem"
-        (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9"
-          (reference "C106") (unit 1)
-        )
         (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/192ed9e7-ecb8-4622-a83a-67936d551760"
           (reference "C302") (unit 1)
         )
@@ -798,9 +791,6 @@
         )
       )
       (project "FennecModem"
-        (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9"
-          (reference "U102") (unit 1)
-        )
         (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/192ed9e7-ecb8-4622-a83a-67936d551760"
           (reference "U301") (unit 1)
         )
@@ -811,7 +801,7 @@
   (symbol (lib_id "power:+12V") (at 140.335 85.725 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cc472fd5-a02a-49f8-9777-4e9100d309e6)
-    (property "Reference" "#PWR0132" (at 140.335 89.535 0)
+    (property "Reference" "#PWR0304" (at 140.335 89.535 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12V" (at 140.335 81.915 0)
@@ -826,9 +816,6 @@
     (pin "1" (uuid 43dde2a9-3e64-4e58-b9ef-76b856743249))
     (instances
       (project "FennecModem"
-        (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9"
-          (reference "#PWR0132") (unit 1)
-        )
         (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/192ed9e7-ecb8-4622-a83a-67936d551760"
           (reference "#PWR0304") (unit 1)
         )
@@ -859,9 +846,6 @@
         )
       )
       (project "FennecModem"
-        (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9"
-          (reference "#PWR0130") (unit 1)
-        )
         (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/192ed9e7-ecb8-4622-a83a-67936d551760"
           (reference "#PWR0305") (unit 1)
         )
@@ -892,9 +876,6 @@
         )
       )
       (project "FennecModem"
-        (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9"
-          (reference "#PWR0131") (unit 1)
-        )
         (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/192ed9e7-ecb8-4622-a83a-67936d551760"
           (reference "#PWR0306") (unit 1)
         )

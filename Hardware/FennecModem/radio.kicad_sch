@@ -1432,7 +1432,7 @@
   (symbol (lib_id "Isolator:PC817") (at 74.295 74.93 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 873d76d1-020b-42f7-9716-8dbc59704703)
-    (property "Reference" "U103" (at 74.295 66.675 0)
+    (property "Reference" "U202" (at 74.295 66.675 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "PC817" (at 74.295 69.215 0)
@@ -1453,9 +1453,6 @@
     (pin "2" (uuid 19542def-db85-48b8-b688-92eb57fa4207))
     (instances
       (project "FennecModem"
-        (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9"
-          (reference "U103") (unit 1)
-        )
         (path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
           (reference "U202") (unit 1)
         )

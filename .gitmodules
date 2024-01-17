@@ -4,3 +4,6 @@
 [submodule "Hardware/BackPlane/Libraries/kenwoodfox-kicad-libraries"]
 	path = Hardware/BackPlane/Libraries/kenwoodfox-kicad-libraries
 	url = https://github.com/KenwoodFox/kenwoodfox-kicad-libraries.git
+[submodule "Hardware/FennecModem/Libraries/KiCad-RP-Pico"]
+	path = Hardware/FennecModem/Libraries/KiCad-RP-Pico
+	url = https://github.com/sol/KiCad-RP-Pico.git
