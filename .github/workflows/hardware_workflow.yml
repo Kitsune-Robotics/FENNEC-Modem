@@ -19,7 +19,6 @@ jobs:
       matrix:
         variant:
           - FennecModem
-          - BackPlane
 
     steps:
       - uses: actions/checkout@v3

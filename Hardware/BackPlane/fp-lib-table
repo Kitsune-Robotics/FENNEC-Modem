@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name "KenwoodFox")(type "KiCad")(uri "${KIPRJMOD}/Libraries/kenwoodfox-kicad-libraries/footprints/KenwoodFox.pretty")(options "")(descr ""))
-)
