@@ -14,6 +14,15 @@ The Fennec Modem is designed with APRN in mind! But is in no means only limted t
  - [ ] Other SSTV Formats
 
 
+# Getting started
+
+Clone this repo
+
+```shell
+git clone --recurse-submodules https://github.com/Kitsune-Robotics/FENNEC-Modem
+```
+
+
 # Thank You!
 
 Without the resources from other hams on the internet, I don't know if i would ever get this project done!
