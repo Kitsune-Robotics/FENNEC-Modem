@@ -1,14 +1,272 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "f301e7ac-67a5-4d73-9442-423b1dbc1b13")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Device:C_Small"
-			(pin_numbers hide)
+		(symbol "Amplifier_Operational:MCP6022"
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.127)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "MCP6022"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://ww1.microchip.com/downloads/en/devicedoc/20001685e.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Dual Operational Amplifiers, Rail-to-Rail Input/Output, DIP-8/SOIC-8/TSSOP-8"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "dual opamp rail-to-rail"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MCP6022_1_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "MCP6022_2_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "MCP6022_3_1"
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:C_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -78,10 +336,10 @@
 			(symbol "C_Small_0_1"
 				(polyline
 					(pts
-						(xy -1.524 -0.508) (xy 1.524 -0.508)
+						(xy -1.524 0.508) (xy 1.524 0.508)
 					)
 					(stroke
-						(width 0.3302)
+						(width 0.3048)
 						(type default)
 					)
 					(fill
@@ -90,10 +348,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 0.508) (xy 1.524 0.508)
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3048)
+						(width 0.3302)
 						(type default)
 					)
 					(fill
@@ -139,11 +397,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -261,12 +524,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -357,7 +625,60 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "Transmitting the tones is slightly more work\nwe want another low-pass filter this time to help us turn our\nsquare waves into something more sinusoidal. \n\nWe also need a voltage divider, the mic-input of the DRA\nrequires 10mv peak to peak, so we'll divide for that"
+		(exclude_from_sim no)
+		(at 114.3 108.966 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify bottom)
+		)
+		(uuid "0b9f6f27-bf44-422a-b283-161d33f8c09e")
+	)
+	(text "F_r = 1/(2 pi R * C)"
+		(exclude_from_sim no)
+		(at 80.01 148.082 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "26150242-bb6c-4348-bb8f-38b980493ca4")
+	)
+	(text "2200hz"
+		(exclude_from_sim no)
+		(at 125.476 115.062 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "2a6930dc-4eae-4fdf-9385-ec8e78071b34")
+	)
+	(text "We're mostly interested in decoding bell202, \nwith frequencies 1200 and 2200hz\n\nWe'll use a simple RC filter and cutoff at 3kz.\n\nThis could always be changed out to listen for higher \nfrequency signals (sstv might use up to 4khz)"
+		(exclude_from_sim no)
+		(at 150.876 44.704 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify bottom)
+		)
+		(uuid "44a8a42e-5bd8-4dc2-9e77-72529d4ab3b3")
+	)
+	(text "1200hz"
+		(exclude_from_sim no)
+		(at 98.806 115.062 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a69424d3-08b1-4387-b562-5f8e7b7bc4d3")
 	)
 	(junction
 		(at 139.7 53.34)
@@ -372,10 +693,36 @@
 		(uuid "34c05590-ac91-497f-acb2-d7e40aff0954")
 	)
 	(junction
+		(at 133.35 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a8fde208-18da-4824-a2e3-0a0bafe536a9")
+	)
+	(junction
 		(at 109.22 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "af44fc0e-f01c-4cf2-a613-bc2f7974d061")
+	)
+	(wire
+		(pts
+			(xy 133.35 123.19) (xy 157.48 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1749b40b-62e4-430c-9c16-9a1c32e8a5bd")
+	)
+	(wire
+		(pts
+			(xy 133.35 133.35) (xy 133.35 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a2e4d81-9394-48b1-85f2-5b9570e045d2")
 	)
 	(wire
 		(pts
@@ -399,7 +746,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 123.19) (xy 157.48 123.19)
+			(xy 109.22 123.19) (xy 123.19 123.19)
 		)
 		(stroke
 			(width 0)
@@ -419,7 +766,17 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 123.19) (xy 97.79 123.19)
+			(xy 128.27 123.19) (xy 133.35 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b895fcc-52dd-4a69-9bef-8245201d10f5")
+	)
+	(wire
+		(pts
+			(xy 82.55 123.19) (xy 96.52 123.19)
 		)
 		(stroke
 			(width 0)
@@ -519,7 +876,17 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 123.19) (xy 102.87 123.19)
+			(xy 133.35 128.27) (xy 133.35 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "efac2bfa-0fd3-4683-bb17-f96f95f0542c")
+	)
+	(wire
+		(pts
+			(xy 109.22 123.19) (xy 101.6 123.19)
 		)
 		(stroke
 			(width 0)
@@ -527,32 +894,9 @@
 		)
 		(uuid "f868bf5b-8140-4707-8564-019977762d88")
 	)
-	(text "Transmitting the tones is slightly more work\nwe want another low-pass filter this time to help us turn our\nsquare waves into something more sinusoidal. \n\nWe also need a voltage divider, the mic-input of the DRA\nrequires 500mv peak to peak, so we'll divide for that"
-		(exclude_from_sim no)
-		(at 114.3 108.966 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify bottom)
-		)
-		(uuid "0b9f6f27-bf44-422a-b283-161d33f8c09e")
-	)
-	(text "We're mostly interested in decoding bell202, \nwith frequencies 1200 and 2200hz\n\nWe'll use a simple RC filter and cutoff at 3kz.\n\nThis could always be changed out to listen for higher \nfrequency signals (sstv might use up to 4khz)"
-		(exclude_from_sim no)
-		(at 150.876 44.704 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify bottom)
-		)
-		(uuid "44a8a42e-5bd8-4dc2-9e77-72529d4ab3b3")
-	)
 	(hierarchical_label "To MCU"
 		(shape output)
 		(at 128.27 53.34 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -564,7 +908,6 @@
 	(hierarchical_label "To Radio"
 		(shape output)
 		(at 172.72 130.81 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -576,7 +919,6 @@
 	(hierarchical_label "From MCU"
 		(shape input)
 		(at 82.55 123.19 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -588,7 +930,6 @@
 	(hierarchical_label "From Radio"
 		(shape input)
 		(at 170.18 53.34 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -734,6 +1075,103 @@
 		)
 	)
 	(symbol
+		(lib_id "Amplifier_Operational:MCP6022")
+		(at 227.33 87.63 0)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "295c6cdb-bf17-4613-a825-b2d478338a38")
+		(property "Reference" "U1"
+			(at 226.06 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MCP6022"
+			(at 226.06 88.8999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 227.33 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/devicedoc/20001685e.pdf"
+			(at 227.33 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual Operational Amplifiers, Rail-to-Rail Input/Output, DIP-8/SOIC-8/TSSOP-8"
+			(at 227.33 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC#" "C57639"
+			(at 227.33 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6b9c6817-f3e6-41ae-8972-006b319b00a6")
+		)
+		(pin "7"
+			(uuid "c6510c96-b832-40e4-bb03-5eb8ed1f804e")
+		)
+		(pin "6"
+			(uuid "8b970421-944f-4d9b-9760-70f39246ba20")
+		)
+		(pin "5"
+			(uuid "17e8c3bc-9f10-4e2b-8017-e0c406969fc2")
+		)
+		(pin "4"
+			(uuid "ad379b38-f22d-478d-84c3-abe4d507b948")
+		)
+		(pin "2"
+			(uuid "15f078a4-ebc4-445c-9835-885ebd197a2c")
+		)
+		(pin "3"
+			(uuid "fe17b5be-4eb8-43cc-83ab-6cc99fa12591")
+		)
+		(pin "8"
+			(uuid "4e3289ca-de70-4cd1-a17e-6fde28048d88")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/e2ade840-7bcb-4a84-9d53-fd6392ab05ef"
+					(reference "U1")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 109.22 139.7 0)
 		(unit 1)
@@ -800,33 +1238,32 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 100.33 123.19 90)
+		(lib_id "Device:C_Small")
+		(at 99.06 123.19 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2f687136-8a4d-4fea-9cb8-3de94b983261")
-		(property "Reference" "R2"
-			(at 100.33 118.11 90)
+		(uuid "50dbaf97-3c58-4a04-8b9b-b6aaadb87eb5")
+		(property "Reference" "C2"
+			(at 99.06 120.142 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "10k"
-			(at 100.33 120.65 90)
+		(property "Value" "132nf"
+			(at 99.06 126.492 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 100.33 123.19 0)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm"
+			(at 99.06 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -835,7 +1272,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 100.33 123.19 0)
+			(at 99.06 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -843,8 +1280,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
-			(at 100.33 123.19 0)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 99.06 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -853,15 +1290,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "a66abecd-0648-4944-a227-a73a22bd6746")
+			(uuid "2af9f81f-8759-4703-8930-5594840a9795")
 		)
 		(pin "1"
-			(uuid "cddb2c4c-3437-453f-9432-1e4a45867d9e")
+			(uuid "c89491c9-f2e7-4e9f-afc5-e1aae532414a")
 		)
 		(instances
 			(project "FennecModem"
 				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/e2ade840-7bcb-4a84-9d53-fd6392ab05ef"
-					(reference "R2")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -938,6 +1375,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 133.35 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "525a974a-9a28-4931-99bf-56bd0f86fb08")
+		(property "Reference" "#PWR04"
+			(at 133.35 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 133.35 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 133.35 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "11260562-2047-40ab-ad43-1af31b615a68")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/e2ade840-7bcb-4a84-9d53-fd6392ab05ef"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 157.48 134.62 180)
 		(unit 1)
@@ -956,7 +1459,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "100R"
 			(at 160.02 135.8899 0)
 			(effects
 				(font
@@ -1008,34 +1511,129 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 109.22 130.81 0)
+		(lib_id "Amplifier_Operational:MCP6022")
+		(at 203.2 80.01 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "8b7777b5-2b47-49ab-ab2f-3a91504c8873")
-		(property "Reference" "C2"
-			(at 111.76 129.5462 0)
+		(uuid "713d3a56-5f43-4ecf-b820-e6361b6840b4")
+		(property "Reference" "U1"
+			(at 203.2 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "60nf"
-			(at 111.76 132.0862 0)
+		(property "Value" "MCP6022"
+			(at 203.2 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm"
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 203.2 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/devicedoc/20001685e.pdf"
+			(at 203.2 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual Operational Amplifiers, Rail-to-Rail Input/Output, DIP-8/SOIC-8/TSSOP-8"
+			(at 203.2 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC#" "C57639"
+			(at 203.2 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6b9c6817-f3e6-41ae-8972-006b319b00a5")
+		)
+		(pin "7"
+			(uuid "c6510c96-b832-40e4-bb03-5eb8ed1f804d")
+		)
+		(pin "6"
+			(uuid "8b970421-944f-4d9b-9760-70f39246ba1f")
+		)
+		(pin "5"
+			(uuid "17e8c3bc-9f10-4e2b-8017-e0c406969fc1")
+		)
+		(pin "4"
+			(uuid "ad379b38-f22d-478d-84c3-abe4d507b947")
+		)
+		(pin "2"
+			(uuid "15f078a4-ebc4-445c-9835-885ebd197a2b")
+		)
+		(pin "3"
+			(uuid "fe17b5be-4eb8-43cc-83ab-6cc99fa12590")
+		)
+		(pin "8"
+			(uuid "4e3289ca-de70-4cd1-a17e-6fde28048d87")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/e2ade840-7bcb-4a84-9d53-fd6392ab05ef"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 109.22 130.81 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8362e297-595f-4080-826f-5ca6c5cff0d5")
+		(property "Reference" "R2"
+			(at 111.76 129.5399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1k"
+			(at 111.76 132.0799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 109.22 130.81 0)
 			(effects
 				(font
@@ -1053,7 +1651,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "Resistor, small symbol"
 			(at 109.22 130.81 0)
 			(effects
 				(font
@@ -1063,16 +1661,179 @@
 			)
 		)
 		(pin "2"
-			(uuid "fda4462c-6863-47c9-87bf-ae378f684d4f")
+			(uuid "572b7148-7775-4962-acd9-663b508035f3")
 		)
 		(pin "1"
-			(uuid "65156f14-5456-4759-9d51-7023ab2ce50a")
+			(uuid "fc00b40c-df12-4d3c-a56d-5fdf1fd1c633")
 		)
 		(instances
 			(project "FennecModem"
 				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/e2ade840-7bcb-4a84-9d53-fd6392ab05ef"
-					(reference "C2")
+					(reference "R2")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 125.73 123.19 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a0b9cf5-d08c-4e1e-9586-9db783650528")
+		(property "Reference" "R5"
+			(at 125.73 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 125.73 120.65 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 125.73 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 125.73 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 125.73 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "bb4bc98a-3e6f-40da-8066-b027f74e0a63")
+		)
+		(pin "1"
+			(uuid "f9bab614-535b-4445-8969-339d8b188fb5")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/e2ade840-7bcb-4a84-9d53-fd6392ab05ef"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:MCP6022")
+		(at 203.2 96.52 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ab68c9a7-db20-4bc8-8d47-9aa94cdbf6a4")
+		(property "Reference" "U1"
+			(at 203.2 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MCP6022"
+			(at 203.2 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 203.2 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/devicedoc/20001685e.pdf"
+			(at 203.2 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual Operational Amplifiers, Rail-to-Rail Input/Output, DIP-8/SOIC-8/TSSOP-8"
+			(at 203.2 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC#" "C57639"
+			(at 203.2 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6b9c6817-f3e6-41ae-8972-006b319b00a7")
+		)
+		(pin "7"
+			(uuid "c6510c96-b832-40e4-bb03-5eb8ed1f804f")
+		)
+		(pin "6"
+			(uuid "8b970421-944f-4d9b-9760-70f39246ba21")
+		)
+		(pin "5"
+			(uuid "17e8c3bc-9f10-4e2b-8017-e0c406969fc3")
+		)
+		(pin "4"
+			(uuid "ad379b38-f22d-478d-84c3-abe4d507b949")
+		)
+		(pin "2"
+			(uuid "15f078a4-ebc4-445c-9835-885ebd197a2d")
+		)
+		(pin "3"
+			(uuid "fe17b5be-4eb8-43cc-83ab-6cc99fa12592")
+		)
+		(pin "8"
+			(uuid "4e3289ca-de70-4cd1-a17e-6fde28048d89")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/e2ade840-7bcb-4a84-9d53-fd6392ab05ef"
+					(reference "U1")
+					(unit 2)
 				)
 			)
 		)
@@ -1140,6 +1901,73 @@
 			(project ""
 				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/e2ade840-7bcb-4a84-9d53-fd6392ab05ef"
 					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 133.35 130.81 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e50464ab-479e-4ef1-9721-b3c326d8a686")
+		(property "Reference" "C3"
+			(at 127.508 129.794 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "72nf"
+			(at 128.016 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm"
+			(at 133.35 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 133.35 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 133.35 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "53c34fce-8226-4889-abe1-411adacb5ed9")
+		)
+		(pin "1"
+			(uuid "b728db29-8997-461b-a65f-7153b61040b2")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/e2ade840-7bcb-4a84-9d53-fd6392ab05ef"
+					(reference "C3")
 					(unit 1)
 				)
 			)
