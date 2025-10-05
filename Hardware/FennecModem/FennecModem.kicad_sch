@@ -1710,6 +1710,16 @@
 		)
 		(uuid "b9188638-a64a-4ade-9fd1-f834437c62f5")
 	)
+	(wire
+		(pts
+			(xy 17.78 118.11) (xy 30.48 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01889d98-fc8e-45e9-bbe1-467a6ac61fd0")
+	)
 	(polyline
 		(pts
 			(xy 284.48 123.825) (xy 284.48 165.1)
@@ -1922,6 +1932,16 @@
 	)
 	(wire
 		(pts
+			(xy 185.42 21.59) (xy 201.93 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d83a65b9-bf7d-44a2-b102-8ea92d12d244")
+	)
+	(wire
+		(pts
 			(xy 274.955 139.7) (xy 274.955 141.605)
 		)
 		(stroke
@@ -2019,6 +2039,26 @@
 			(justify right bottom)
 		)
 		(uuid "5e04a85b-141f-4249-8efb-7c43be58ad62")
+	)
+	(label "TONE_OUT"
+		(at 185.42 21.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9ffb4b11-f092-4d45-b449-9e4365f41017")
+	)
+	(label "TONE_OUT"
+		(at 17.78 118.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b9813748-23cc-49d4-81ac-b02f99a07681")
 	)
 	(label "TXD"
 		(at 245.11 40.005 0)
