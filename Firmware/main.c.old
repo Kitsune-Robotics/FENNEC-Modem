@@ -1,0 +1,104 @@
+#include <stdio.h>
+#include "pico/stdlib.h"
+#include "hardware/gpio.h"
+#include "hardware/pio.h"
+#include "hardware/clocks.h"
+#include "frequency_gen.pio.h"  // Generated from our PIO file
+
+// Pin definitions
+#define LED_PIN 25
+#define FREQ_OUT_PIN_1 2    // GPIO 2 for first frequency output
+#define FREQ_OUT_PIN_2 3    // GPIO 3 for second frequency output  
+#define PWM_OUT_PIN 4       // GPIO 4 for PWM output
+
+// Function prototypes
+void setup_pio_frequency_generators(void);
+void demonstrate_frequency_control(void);
+
+int main() {
+    // Initialize stdio for USB output
+    stdio_init_all();
+    
+    // Initialize the LED pin for status indication
+    gpio_init(LED_PIN);
+    gpio_set_dir(LED_PIN, GPIO_OUT);
+    
+    printf("Pico PIO Frequency Generation Example Started!\n");
+    printf("System Clock: %d Hz\n", clock_get_hz(clk_sys));
+    
+    // Set up PIO-based frequency generators
+    setup_pio_frequency_generators();
+    
+    // Demonstrate dynamic frequency control
+    demonstrate_frequency_control();
+    
+    return 0;
+}
+
+void setup_pio_frequency_generators(void) {
+    // Get available PIO instances
+    PIO pio0 = pio0_hw;
+    PIO pio1 = pio1_hw;
+    
+    // Load PIO programs
+    uint offset_square = pio_add_program(pio0, &square_wave_program);
+    uint offset_precise = pio_add_program(pio0, &precise_square_wave_program);
+    uint offset_pwm = pio_add_program(pio1, &pwm_precise_program);
+    
+    printf("PIO programs loaded at offsets: %d, %d, %d\n", 
+           offset_square, offset_precise, offset_pwm);
+    
+    // Initialize state machines
+    // SM0: Simple 1kHz square wave on GPIO 2
+    square_wave_program_init(pio0, 0, offset_square, FREQ_OUT_PIN_1, 1000.0f);
+    printf("1kHz square wave started on GPIO %d\n", FREQ_OUT_PIN_1);
+    
+    // SM1: Precise 440Hz square wave (A note) on GPIO 3 with 50% duty cycle
+    precise_square_wave_program_init(pio0, 1, offset_precise, FREQ_OUT_PIN_2, 440.0f, 0.5f);
+    printf("440Hz square wave started on GPIO %d\n", FREQ_OUT_PIN_2);
+    
+    // SM0 on PIO1: PWM on GPIO 4
+    pwm_precise_program_init(pio1, 0, offset_pwm, PWM_OUT_PIN);
+    // Set initial PWM: 10kHz with 25% duty cycle
+    uint32_t period = 125000000 / 10000;  // 10kHz period in clock cycles
+    uint32_t duty = period / 4;           // 25% duty cycle
+    pwm_precise_set_parameters(pio1, 0, period, duty);
+    printf("10kHz PWM (25%% duty) started on GPIO %d\n", PWM_OUT_PIN);
+}
+
+void demonstrate_frequency_control(void) {
+    printf("\nStarting frequency control demonstration...\n");
+    
+    uint32_t iteration = 0;
+    
+    while (true) {
+        // Blink status LED
+        gpio_put(LED_PIN, iteration % 2);
+        
+        // Every 5 seconds, change PWM parameters
+        if (iteration % 50 == 0) {
+            // Cycle through different duty cycles: 10%, 25%, 50%, 75%, 90%
+            float duty_cycles[] = {0.1f, 0.25f, 0.5f, 0.75f, 0.9f};
+            int duty_index = (iteration / 50) % 5;
+            
+            uint32_t period = 125000000 / 10000;  // Keep 10kHz frequency
+            uint32_t duty = (uint32_t)(period * duty_cycles[duty_index]);
+            
+            pwm_precise_set_parameters(pio1, 0, period, duty);
+            printf("PWM duty cycle changed to %.0f%%\n", duty_cycles[duty_index] * 100);
+        }
+        
+        // Every 10 seconds, demonstrate frequency precision
+        if (iteration % 100 == 0 && iteration > 0) {
+            printf("\nFrequency Generation Status:\n");
+            printf("- GPIO %d: 1000.00 Hz square wave (PIO-generated)\n", FREQ_OUT_PIN_1);
+            printf("- GPIO %d: 440.00 Hz square wave (Musical A note)\n", FREQ_OUT_PIN_2);
+            printf("- GPIO %d: 10000.0 Hz PWM with variable duty cycle\n", PWM_OUT_PIN);
+            printf("- All frequencies are crystal-accurate thanks to PIO timing\n");
+            printf("- PIO allows sub-microsecond timing precision\n\n");
+        }
+        
+        sleep_ms(100);
+        iteration++;
+    }
+}

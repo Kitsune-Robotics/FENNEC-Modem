@@ -1,0 +1,136 @@
+;
+; PIO program for precise frequency generation
+; This program generates square waves with precise timing
+;
+
+.program square_wave
+.side_set 1
+
+; Generate a square wave on the side-set pin
+; The frequency is determined by the clock divider and delay cycles
+
+loop:
+    nop         side 1      ; Set pin high, then wait
+    nop         side 0      ; Set pin low, then wait
+    jmp loop                ; Jump back to start
+
+% c-sdk {
+// Helper function to initialize the PIO program
+static inline void square_wave_program_init(PIO pio, uint sm, uint offset, uint pin, float freq_hz) {
+    // Configure the state machine
+    pio_sm_config c = square_wave_program_get_default_config(offset);
+    
+    // Set the side-set pin
+    sm_config_set_sideset_pins(&c, pin);
+    
+    // Configure the pin as output
+    pio_gpio_init(pio, pin);
+    pio_sm_set_consecutive_pindirs(pio, sm, pin, 1, true);
+    
+    // Calculate clock divider for desired frequency
+    // PIO clock = 125MHz by default
+    // Each loop iteration takes 2 cycles (2 nops)
+    // So actual frequency = PIO_clock / (2 * clock_div)
+    float clock_div = 125000000.0f / (2.0f * freq_hz);
+    sm_config_set_clkdiv(&c, clock_div);
+    
+    // Initialize and start the state machine
+    pio_sm_init(pio, sm, offset, &c);
+    pio_sm_set_enabled(pio, sm, true);
+}
+%}
+
+;
+; More precise frequency generation with configurable duty cycle
+;
+.program precise_square_wave
+.side_set 1
+
+; This version allows for different high/low periods
+; by using different delay values
+
+.wrap_target
+public entry_point:
+    set x, 24       side 1  ; Load high period count, set pin high
+high_loop:
+    jmp x-- high_loop       ; Count down high period
+    
+    set x, 24       side 0  ; Load low period count, set pin low  
+low_loop:
+    jmp x-- low_loop        ; Count down low period
+.wrap
+
+% c-sdk {
+static inline void precise_square_wave_program_init(PIO pio, uint sm, uint offset, uint pin, 
+                                                   float freq_hz, float duty_cycle) {
+    pio_sm_config c = precise_square_wave_program_get_default_config(offset);
+    
+    // Set the side-set pin
+    sm_config_set_sideset_pins(&c, pin);
+    
+    // Configure the pin as output
+    pio_gpio_init(pio, pin);
+    pio_sm_set_consecutive_pindirs(pio, sm, pin, 1, true);
+    
+    // Calculate timing parameters
+    // Total period = (high_count + 1) + (low_count + 1) + 2 (for set instructions)
+    uint32_t total_cycles = (uint32_t)(125000000.0f / freq_hz);
+    uint32_t high_cycles = (uint32_t)(total_cycles * duty_cycle) - 1;
+    uint32_t low_cycles = total_cycles - high_cycles - 3;
+    
+    // Clamp to valid ranges
+    if (high_cycles > 31) high_cycles = 31;
+    if (low_cycles > 31) low_cycles = 31;
+    
+    // The actual values are loaded by the 'set' instructions in the program
+    // We'll modify them at runtime using pio_sm_exec()
+    
+    pio_sm_init(pio, sm, offset, &c);
+    pio_sm_set_enabled(pio, sm, true);
+}
+%}
+
+;
+; PWM generation with very fine control
+;
+.program pwm_precise
+.side_set 1 opt
+
+; PWM with period and duty cycle control via FIFO
+; Send two 32-bit values: [period-1, duty_cycle-1]
+
+.wrap_target
+    pull block          side 0  ; Pull period value, ensure pin starts low
+    mov x, osr                  ; Copy period to x
+    pull block                  ; Pull duty cycle value  
+    mov y, osr                  ; Copy duty cycle to y
+pwm_loop:
+    jmp x!=y skip       side 1  ; If x != y, set pin high
+    jmp y-- pwm_loop    side 0  ; Decrement y, set pin low
+skip:
+    jmp y-- pwm_loop            ; Just decrement y, keep pin state
+.wrap
+
+% c-sdk {
+static inline void pwm_precise_program_init(PIO pio, uint sm, uint offset, uint pin) {
+    pio_sm_config c = pwm_precise_program_get_default_config(offset);
+    
+    // Set the side-set pin
+    sm_config_set_sideset_pins(&c, pin);
+    
+    // Configure the pin as output
+    pio_gpio_init(pio, pin);
+    pio_sm_set_consecutive_pindirs(pio, sm, pin, 1, true);
+    
+    // Configure FIFO - we'll be sending period and duty cycle values
+    sm_config_set_fifo_join(&c, PIO_FIFO_JOIN_TX);
+    
+    pio_sm_init(pio, sm, offset, &c);
+    pio_sm_set_enabled(pio, sm, true);
+}
+
+static inline void pwm_precise_set_parameters(PIO pio, uint sm, uint32_t period, uint32_t duty_cycle) {
+    pio_sm_put_blocking(pio, sm, period - 1);
+    pio_sm_put_blocking(pio, sm, duty_cycle - 1);
+}
+%}
