@@ -21,12 +21,12 @@ jobs:
           - FennecModem
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           submodules: true
 
-      - uses: INTI-CMNB/KiBot@v2_k8
+      - uses: INTI-CMNB/KiBot@v2_k9
         with:
           # Config file
           config: Hardware/${{ matrix.variant }}.yaml
@@ -105,7 +105,7 @@ jobs:
 
     steps:
       # Be in our repo
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
