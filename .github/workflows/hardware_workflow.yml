@@ -38,7 +38,7 @@ jobs:
           board: "Hardware/${{ matrix.variant }}/${{ matrix.variant }}.kicad_pcb"
 
       - name: upload results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.variant }}
           path: _hardwareOutput
