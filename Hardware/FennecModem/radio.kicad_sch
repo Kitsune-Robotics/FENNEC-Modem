@@ -182,6 +182,113 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:TestPoint_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint_Small"
+				(at 0 2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_Small_0_1"
+				(circle
+					(center 0 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_Small_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C_Small"
 			(pin_numbers
 				(hide yes)
@@ -1240,6 +1347,131 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+3.3V"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3.3V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+3.3V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3.3V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+5V"
 			(power)
 			(pin_names
@@ -1463,7 +1695,7 @@
 	)
 	(text "Pulldown = 0.5w\nFloat = 1w"
 		(exclude_from_sim no)
-		(at 106.68 92.71 0)
+		(at 92.075 92.71 0)
 		(effects
 			(font
 				(size 0.508 0.508)
@@ -1474,7 +1706,7 @@
 	)
 	(text "LOW = Sleep\nHIGH = Normal"
 		(exclude_from_sim no)
-		(at 106.68 90.17 0)
+		(at 92.075 90.17 0)
 		(effects
 			(font
 				(size 0.508 0.508)
@@ -1484,16 +1716,64 @@
 		(uuid "b9bed2d0-39bd-43ea-865d-add9a91d5f93")
 	)
 	(junction
-		(at 133.985 88.9)
+		(at 123.19 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b674015b-c824-4b4d-9754-c0a64f6d01a8")
+		(uuid "65e1e068-8dfd-47f3-a8c7-c2af7871e2c5")
+	)
+	(junction
+		(at 123.19 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6c6da4f0-b656-43ce-ab70-0d1052184b97")
+	)
+	(junction
+		(at 123.19 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7f8a82ef-eee4-4960-981f-f476676a758a")
+	)
+	(junction
+		(at 133.35 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9ff8844f-9d59-4a0b-bb5c-9955f7b96863")
+	)
+	(junction
+		(at 123.19 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a1674e31-3434-4f17-bffa-b7bf00420493")
+	)
+	(junction
+		(at 118.11 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b07be304-c57b-4389-bd0f-3c3280a0413c")
+	)
+	(junction
+		(at 118.11 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bbf7862d-4c52-4c48-b348-6eb3c1458492")
 	)
 	(junction
 		(at 144.78 118.745)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "be3b8850-9c00-48ee-bb2b-f59b0733102d")
+	)
+	(junction
+		(at 118.11 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fd7c64eb-d796-47cd-9dfe-a17f74169e0e")
+	)
+	(junction
+		(at 118.11 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ff3f4dd0-1aff-416e-8c0d-821aa89aca29")
 	)
 	(wire
 		(pts
@@ -1507,7 +1787,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.345 149.86) (xy 220.345 151.765)
+			(xy 219.71 149.86) (xy 219.71 151.765)
 		)
 		(stroke
 			(width 0)
@@ -1527,13 +1807,23 @@
 	)
 	(wire
 		(pts
-			(xy 234.315 149.86) (xy 234.315 151.765)
+			(xy 233.68 149.86) (xy 233.68 151.765)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "21f95831-d656-4856-b55b-610790d4166a")
+	)
+	(wire
+		(pts
+			(xy 118.11 111.76) (xy 135.89 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2272be9d-b292-4364-b98a-197c88b80f12")
 	)
 	(wire
 		(pts
@@ -1547,13 +1837,33 @@
 	)
 	(wire
 		(pts
-			(xy 120.015 106.68) (xy 135.89 106.68)
+			(xy 133.35 88.9) (xy 135.89 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c79d235-ad05-4047-ab0a-5270d01bc363")
+	)
+	(wire
+		(pts
+			(xy 105.41 106.68) (xy 118.11 106.68)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "45968cc3-f621-4c31-9f8c-c30367e000db")
+	)
+	(wire
+		(pts
+			(xy 123.19 88.9) (xy 133.35 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "497ca521-b323-4f0b-9276-26259aeb3e77")
 	)
 	(wire
 		(pts
@@ -1577,16 +1887,6 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 140.335) (xy 186.69 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "52292c19-ea38-424f-b3f9-b71949a01dca")
-	)
-	(wire
-		(pts
 			(xy 180.975 163.195) (xy 186.69 163.195)
 		)
 		(stroke
@@ -1607,16 +1907,6 @@
 	)
 	(wire
 		(pts
-			(xy 220.345 140.335) (xy 220.345 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "592e622c-44c9-44a6-98b9-b6e89cbf4cfa")
-	)
-	(wire
-		(pts
 			(xy 186.69 149.86) (xy 186.69 151.765)
 		)
 		(stroke
@@ -1627,7 +1917,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.015 88.9) (xy 133.985 88.9)
+			(xy 105.41 88.9) (xy 123.19 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1637,7 +1927,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.015 109.22) (xy 135.89 109.22)
+			(xy 105.41 109.22) (xy 123.19 109.22)
 		)
 		(stroke
 			(width 0)
@@ -1647,7 +1937,7 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 163.195) (xy 220.345 163.195)
+			(xy 213.995 163.195) (xy 219.71 163.195)
 		)
 		(stroke
 			(width 0)
@@ -1667,7 +1957,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.015 111.76) (xy 135.89 111.76)
+			(xy 105.41 111.76) (xy 118.11 111.76)
 		)
 		(stroke
 			(width 0)
@@ -1677,7 +1967,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.015 91.44) (xy 135.89 91.44)
+			(xy 105.41 91.44) (xy 118.11 91.44)
 		)
 		(stroke
 			(width 0)
@@ -1697,23 +1987,13 @@
 	)
 	(wire
 		(pts
-			(xy 205.105 149.86) (xy 205.105 151.765)
+			(xy 204.47 149.86) (xy 204.47 151.765)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "83e14be0-cded-420e-9682-320d1384a3d5")
-	)
-	(wire
-		(pts
-			(xy 234.315 140.335) (xy 234.315 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "877d2c56-ff88-4408-a635-acb48434435b")
 	)
 	(wire
 		(pts
@@ -1727,7 +2007,17 @@
 	)
 	(wire
 		(pts
-			(xy 120.015 99.06) (xy 135.89 99.06)
+			(xy 123.19 109.22) (xy 135.89 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92d72cf8-0975-42a6-9bc2-810a30fad86e")
+	)
+	(wire
+		(pts
+			(xy 105.41 99.06) (xy 118.11 99.06)
 		)
 		(stroke
 			(width 0)
@@ -1737,7 +2027,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 96.52) (xy 135.89 96.52)
+			(xy 114.3 96.52) (xy 123.19 96.52)
 		)
 		(stroke
 			(width 0)
@@ -1747,7 +2037,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.315 159.385) (xy 234.315 163.195)
+			(xy 233.68 159.385) (xy 233.68 163.195)
 		)
 		(stroke
 			(width 0)
@@ -1757,7 +2047,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.985 72.39) (xy 133.985 76.2)
+			(xy 133.35 72.39) (xy 133.35 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1767,7 +2057,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.015 96.52) (xy 125.73 96.52)
+			(xy 105.41 96.52) (xy 106.68 96.52)
 		)
 		(stroke
 			(width 0)
@@ -1777,7 +2067,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.345 159.385) (xy 220.345 163.195)
+			(xy 219.71 159.385) (xy 219.71 163.195)
 		)
 		(stroke
 			(width 0)
@@ -1787,7 +2077,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.105 140.335) (xy 205.105 142.24)
+			(xy 204.47 139.7) (xy 204.47 142.24)
 		)
 		(stroke
 			(width 0)
@@ -1797,7 +2087,37 @@
 	)
 	(wire
 		(pts
-			(xy 133.985 83.82) (xy 133.985 88.9)
+			(xy 219.71 139.7) (xy 219.71 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6599911-6dd0-4065-a8f2-977455b7a6f2")
+	)
+	(wire
+		(pts
+			(xy 118.11 91.44) (xy 135.89 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba238b8d-00c5-48c6-bb30-74a24632fbfb")
+	)
+	(wire
+		(pts
+			(xy 123.19 96.52) (xy 135.89 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbf1e7dd-f151-4f8b-bc25-4ca2f1137fb6")
+	)
+	(wire
+		(pts
+			(xy 133.35 83.82) (xy 133.35 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1807,7 +2127,17 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 101.6) (xy 120.015 101.6)
+			(xy 186.69 139.7) (xy 186.69 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bee06eb5-beeb-454a-856c-9399b543ef6c")
+	)
+	(wire
+		(pts
+			(xy 105.41 101.6) (xy 123.19 101.6)
 		)
 		(stroke
 			(width 0)
@@ -1827,7 +2157,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 163.195) (xy 205.105 163.195)
+			(xy 198.755 163.195) (xy 204.47 163.195)
 		)
 		(stroke
 			(width 0)
@@ -1847,6 +2177,16 @@
 	)
 	(wire
 		(pts
+			(xy 118.11 99.06) (xy 135.89 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9f23016-0a58-495e-8af8-2fba0247aa2e")
+	)
+	(wire
+		(pts
 			(xy 144.78 116.84) (xy 144.78 118.745)
 		)
 		(stroke
@@ -1857,7 +2197,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 163.195) (xy 234.315 163.195)
+			(xy 227.965 163.195) (xy 233.68 163.195)
 		)
 		(stroke
 			(width 0)
@@ -1877,7 +2217,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.105 159.385) (xy 205.105 163.195)
+			(xy 204.47 159.385) (xy 204.47 163.195)
 		)
 		(stroke
 			(width 0)
@@ -1897,13 +2237,33 @@
 	)
 	(wire
 		(pts
-			(xy 133.985 88.9) (xy 135.89 88.9)
+			(xy 123.19 101.6) (xy 135.89 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fb194dc7-8770-4bba-93e7-b5d6c193557d")
+		(uuid "f70bc4c6-0dda-49da-8dde-3384b0d915c9")
+	)
+	(wire
+		(pts
+			(xy 233.68 139.7) (xy 233.68 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcc70a3d-fe92-4017-843b-cd6d5ef04f7a")
+	)
+	(wire
+		(pts
+			(xy 118.11 106.68) (xy 135.89 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "febc16d7-b4b5-43cb-8fd3-e958c8689cc6")
 	)
 	(label "ANT"
 		(at 227.33 88.9 180)
@@ -1926,7 +2286,7 @@
 		(uuid "37a0bf31-4565-42ee-9de8-9ccdedbd1e21")
 	)
 	(label "TXD"
-		(at 228.6 163.195 0)
+		(at 227.965 163.195 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1936,7 +2296,7 @@
 		(uuid "382bff03-6278-4ee3-a848-96026d950bfa")
 	)
 	(label "PTT"
-		(at 199.39 163.195 0)
+		(at 198.755 163.195 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1956,7 +2316,7 @@
 		(uuid "e9b59abc-5c65-4635-8855-a7891c752a93")
 	)
 	(label "RXD"
-		(at 214.63 163.195 0)
+		(at 213.995 163.195 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1967,7 +2327,7 @@
 	)
 	(hierarchical_label "AudioIn"
 		(shape input)
-		(at 120.015 101.6 180)
+		(at 105.41 101.6 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1978,7 +2338,7 @@
 	)
 	(hierarchical_label "PTT"
 		(shape input)
-		(at 120.015 96.52 180)
+		(at 105.41 96.52 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1989,7 +2349,7 @@
 	)
 	(hierarchical_label "AudioOut"
 		(shape output)
-		(at 120.015 99.06 180)
+		(at 105.41 99.06 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2000,7 +2360,7 @@
 	)
 	(hierarchical_label "H{slash}L"
 		(shape input)
-		(at 120.015 91.44 180)
+		(at 105.41 91.44 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2011,7 +2371,7 @@
 	)
 	(hierarchical_label "Sleep"
 		(shape input)
-		(at 120.015 88.9 180)
+		(at 105.41 88.9 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2022,7 +2382,7 @@
 	)
 	(hierarchical_label "TXD"
 		(shape output)
-		(at 120.015 109.22 180)
+		(at 105.41 109.22 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2033,7 +2393,7 @@
 	)
 	(hierarchical_label "RXD"
 		(shape input)
-		(at 120.015 111.76 180)
+		(at 105.41 111.76 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2044,7 +2404,7 @@
 	)
 	(hierarchical_label "SQL"
 		(shape output)
-		(at 120.015 106.68 180)
+		(at 105.41 106.68 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2119,73 +2479,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 220.345 140.335 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0ab59e6f-f2e6-4b91-be0b-ec567147da1a")
-		(property "Reference" "#PWR0202"
-			(at 220.345 144.145 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 220.345 136.525 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 220.345 140.335 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 220.345 140.335 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 220.345 140.335 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "94eaa6ac-2b5c-48b9-ac9b-01870e17d68f")
-		)
-		(instances
-			(project "FennecModem"
-				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
-					(reference "#PWR0202")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 133.985 80.01 180)
+		(at 133.35 80.01 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2193,7 +2488,7 @@
 		(dnp no)
 		(uuid "1e3d92e0-cb4a-4950-bb4c-d1af0a08a3db")
 		(property "Reference" "R201"
-			(at 130.175 78.74 0)
+			(at 129.54 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2201,7 +2496,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 129.54 81.28 0)
+			(at 128.905 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2209,7 +2504,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 135.763 80.01 90)
+			(at 135.128 80.01 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2218,7 +2513,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 133.985 80.01 0)
+			(at 133.35 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2227,7 +2522,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 133.985 80.01 0)
+			(at 133.35 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2310,6 +2605,71 @@
 			(project "FennecModem"
 				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
 					(reference "#PWR0110")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 186.69 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "24973691-2dc5-4e84-8ae3-68ec86823bf8")
+		(property "Reference" "#PWR017"
+			(at 186.69 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 186.69 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 186.69 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 186.69 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 186.69 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0ec1b86f-544c-4c5f-b11e-261f8b0d6282")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -2447,7 +2807,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 205.105 155.575 90)
+		(at 204.47 155.575 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2455,7 +2815,7 @@
 		(dnp no)
 		(uuid "3ebfa7fc-d468-4ad1-b7f0-f5285c24cbc2")
 		(property "Reference" "D203"
-			(at 208.28 157.48 90)
+			(at 207.645 157.48 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2464,7 +2824,7 @@
 			)
 		)
 		(property "Value" "TX"
-			(at 208.28 155.575 90)
+			(at 207.645 155.575 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2473,7 +2833,7 @@
 			)
 		)
 		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O1.27mm_Z2.0mm"
-			(at 205.105 155.575 0)
+			(at 204.47 155.575 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2482,7 +2842,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 205.105 155.575 0)
+			(at 204.47 155.575 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2491,7 +2851,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 205.105 155.575 0)
+			(at 204.47 155.575 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2509,6 +2869,72 @@
 			(project "FennecModem"
 				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
 					(reference "D203")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 123.19 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4597e9aa-fc2c-4464-90a4-981f77ad3e39")
+		(property "Reference" "TP5"
+			(at 123.952 100.838 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AudioIn"
+			(at 123.952 102.362 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Bridge_Pitch2.0mm_Drill0.7mm"
+			(at 128.27 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 128.27 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 123.19 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cda28506-7d08-4a7a-b250-680815e69434")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -2580,73 +3006,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 186.69 140.335 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4b9f2fc9-f8f7-45e1-8184-5c14278383d5")
-		(property "Reference" "#PWR0112"
-			(at 186.69 144.145 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 186.69 136.525 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 186.69 140.335 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 186.69 140.335 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 186.69 140.335 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "270ed21e-a74f-4511-a2be-a01587a793a7")
-		)
-		(instances
-			(project "FennecModem"
-				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
-					(reference "#PWR0112")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 205.105 146.05 180)
+		(at 204.47 146.05 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2654,7 +3015,7 @@
 		(dnp no)
 		(uuid "4ea62f59-9e33-40d4-bae0-7ffeb2a55891")
 		(property "Reference" "R205"
-			(at 207.01 145.415 0)
+			(at 206.375 145.415 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2663,7 +3024,7 @@
 			)
 		)
 		(property "Value" "300"
-			(at 207.01 147.32 0)
+			(at 206.375 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2672,7 +3033,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 206.883 146.05 90)
+			(at 206.248 146.05 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2681,7 +3042,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 205.105 146.05 0)
+			(at 204.47 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2690,7 +3051,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 205.105 146.05 0)
+			(at 204.47 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2715,7 +3076,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 220.345 155.575 90)
+		(at 219.71 155.575 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2723,7 +3084,7 @@
 		(dnp no)
 		(uuid "4f61950d-73f8-4a8b-ac43-ad60605b2a12")
 		(property "Reference" "D202"
-			(at 223.52 157.48 90)
+			(at 222.885 157.48 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2732,7 +3093,7 @@
 			)
 		)
 		(property "Value" "RXD"
-			(at 223.52 155.575 90)
+			(at 222.885 155.575 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2741,7 +3102,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
-			(at 220.345 155.575 0)
+			(at 219.71 155.575 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2750,7 +3111,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 220.345 155.575 0)
+			(at 219.71 155.575 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2759,7 +3120,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 220.345 155.575 0)
+			(at 219.71 155.575 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2783,8 +3144,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 233.68 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4ffe82b5-b3a7-4f64-8ad6-eadc6012cffd")
+		(property "Reference" "#PWR020"
+			(at 233.68 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 233.68 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 233.68 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 233.68 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 233.68 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c9a94165-f997-470c-83d9-b325ed9be155")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
-		(at 234.315 146.05 180)
+		(at 233.68 146.05 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2792,7 +3218,7 @@
 		(dnp no)
 		(uuid "58d56abc-aa13-4d46-bca5-7ef36a2d6ee3")
 		(property "Reference" "R204"
-			(at 236.22 145.415 0)
+			(at 235.585 145.415 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2801,7 +3227,7 @@
 			)
 		)
 		(property "Value" "300"
-			(at 236.22 147.32 0)
+			(at 235.585 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2810,7 +3236,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 236.093 146.05 90)
+			(at 235.458 146.05 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2819,7 +3245,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 234.315 146.05 0)
+			(at 233.68 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2828,7 +3254,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 234.315 146.05 0)
+			(at 233.68 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2917,6 +3343,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 219.71 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6b6abb0d-1950-4023-afd5-2c19b40a8b8e")
+		(property "Reference" "#PWR019"
+			(at 219.71 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 219.71 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 219.71 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 219.71 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 219.71 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a5410445-9208-4f42-8a06-930d41d44aeb")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 186.69 146.05 180)
 		(unit 1)
@@ -2980,6 +3471,203 @@
 			(project "FennecModem"
 				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
 					(reference "R202")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 123.19 109.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6f63b378-1b74-4f38-b47b-33244110b474")
+		(property "Reference" "TP7"
+			(at 123.952 108.458 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TXD"
+			(at 123.952 109.982 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Bridge_Pitch2.0mm_Drill0.7mm"
+			(at 128.27 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 128.27 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 123.19 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "85b5217b-7e40-4ed3-9109-c61ad6d5e42c")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 123.19 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "872491d5-2123-4fb0-919f-c5f78425926b")
+		(property "Reference" "TP3"
+			(at 123.952 95.758 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PTT"
+			(at 123.952 97.282 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Bridge_Pitch2.0mm_Drill0.7mm"
+			(at 128.27 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 128.27 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 123.19 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "970e61ac-7e95-41d3-a545-f685f3f91859")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 133.35 72.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "882ee5d7-4737-40ba-b72f-63085ac15cb4")
+		(property "Reference" "#PWR021"
+			(at 133.35 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 133.35 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 133.35 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ed965bd0-54bb-470f-86a9-e2f29d4af9de")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -3122,7 +3810,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 220.345 146.05 180)
+		(at 219.71 146.05 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3130,7 +3818,7 @@
 		(dnp no)
 		(uuid "97c9c04d-17d7-4a89-82ad-0d3f6e9e2925")
 		(property "Reference" "R203"
-			(at 222.25 145.415 0)
+			(at 221.615 145.415 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3139,7 +3827,7 @@
 			)
 		)
 		(property "Value" "300"
-			(at 222.25 147.32 0)
+			(at 221.615 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3148,7 +3836,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 222.123 146.05 90)
+			(at 221.488 146.05 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3157,7 +3845,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 220.345 146.05 0)
+			(at 219.71 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3166,7 +3854,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 220.345 146.05 0)
+			(at 219.71 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3190,138 +3878,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 234.315 140.335 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9f03651b-79ec-4b11-9a46-7d2a2dfb98b4")
-		(property "Reference" "#PWR0203"
-			(at 234.315 144.145 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 234.315 136.525 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 234.315 140.335 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 234.315 140.335 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 234.315 140.335 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "73eacabf-9b88-4989-b54d-eaf568c30025")
-		)
-		(instances
-			(project "FennecModem"
-				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
-					(reference "#PWR0203")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 205.105 140.335 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a4739721-e87b-4f2e-a0c4-2f803dc23107")
-		(property "Reference" "#PWR0201"
-			(at 205.105 144.145 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 205.105 136.525 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 205.105 140.335 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 205.105 140.335 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 205.105 140.335 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a0cb3169-b00c-4d4a-9989-f5d869822401")
-		)
-		(instances
-			(project "FennecModem"
-				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
-					(reference "#PWR0201")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 129.54 96.52 90)
+		(at 110.49 96.52 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3329,7 +3887,7 @@
 		(dnp no)
 		(uuid "a9384f7d-b374-4efc-ab36-0653d10346fb")
 		(property "Reference" "R206"
-			(at 129.54 93.98 90)
+			(at 110.49 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3337,7 +3895,7 @@
 			)
 		)
 		(property "Value" "47R"
-			(at 129.54 96.52 90)
+			(at 110.49 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3345,7 +3903,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 129.54 98.298 90)
+			(at 110.49 98.298 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3354,7 +3912,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 129.54 96.52 0)
+			(at 110.49 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3363,7 +3921,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 129.54 96.52 0)
+			(at 110.49 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3387,16 +3945,34 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 133.985 72.39 0)
+		(lib_id "Connector:TestPoint_Small")
+		(at 118.11 106.68 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d6520202-0ebe-4a20-b4dd-d2df890fa3ef")
-		(property "Reference" "#PWR0105"
-			(at 133.985 76.2 0)
+		(uuid "c1cd45bb-dc9d-47b9-a5d9-1282cbac8ba3")
+		(property "Reference" "TP6"
+			(at 118.872 105.918 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SQL"
+			(at 118.872 107.442 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Bridge_Pitch2.0mm_Drill0.7mm"
+			(at 123.19 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3404,16 +3980,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
-			(at 133.985 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 133.985 72.39 0)
+		(property "Datasheet" "~"
+			(at 123.19 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3421,17 +3989,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 133.985 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 133.985 72.39 0)
+		(property "Description" "test point"
+			(at 118.11 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3440,12 +3999,209 @@
 			)
 		)
 		(pin "1"
-			(uuid "5c17b7ce-bf12-4a46-954a-fd1469c7d243")
+			(uuid "1340957b-3cfd-4da7-8737-54d84de097d7")
 		)
 		(instances
 			(project "FennecModem"
 				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
-					(reference "#PWR0105")
+					(reference "TP6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 118.11 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c77f37b6-9788-40c3-bda6-b750fb3a942b")
+		(property "Reference" "TP4"
+			(at 118.872 98.298 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AudioOut"
+			(at 118.872 99.822 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Bridge_Pitch2.0mm_Drill0.7mm"
+			(at 123.19 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 118.11 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47d315c7-092e-478f-b078-56c5359ab6ce")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
+					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 118.11 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d9b20dab-9407-46a5-a634-226bd528163b")
+		(property "Reference" "TP8"
+			(at 118.872 110.998 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "RXD"
+			(at 118.872 112.522 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Bridge_Pitch2.0mm_Drill0.7mm"
+			(at 123.19 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 118.11 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2dc8d274-6a6f-47fa-8b7a-866e3b073130")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
+					(reference "TP8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 204.47 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e1e77281-dac8-4c8e-bb8e-cd430ecdd7af")
+		(property "Reference" "#PWR018"
+			(at 204.47 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 204.47 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 204.47 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 204.47 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 204.47 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "699b35ec-3018-4f63-9390-a7737d89227d")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -3592,7 +4348,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 234.315 155.575 90)
+		(at 233.68 155.575 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3600,7 +4356,7 @@
 		(dnp no)
 		(uuid "e8d3f092-5670-4128-930a-25afc3ce8602")
 		(property "Reference" "D204"
-			(at 237.49 157.48 90)
+			(at 236.855 157.48 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3609,7 +4365,7 @@
 			)
 		)
 		(property "Value" "TXD"
-			(at 237.49 155.575 90)
+			(at 236.855 155.575 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3618,7 +4374,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
-			(at 234.315 155.575 0)
+			(at 233.68 155.575 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3627,7 +4383,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 234.315 155.575 0)
+			(at 233.68 155.575 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3636,7 +4392,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 234.315 155.575 0)
+			(at 233.68 155.575 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3868,6 +4624,72 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 123.19 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fa6f2552-f98b-4018-9e6b-c08674d97f78")
+		(property "Reference" "TP1"
+			(at 123.952 88.138 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SleepTP"
+			(at 123.952 89.662 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Bridge_Pitch2.0mm_Drill0.7mm"
+			(at 128.27 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 128.27 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 123.19 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fa9c28bd-6617-4f53-a7c4-92463cd3081c")
+		)
+		(instances
+			(project ""
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "KenwoodFox:DRA818V")
 		(at 146.05 100.33 0)
 		(unit 1)
@@ -3922,7 +4744,7 @@
 			)
 		)
 		(property "LCSC#" "C3001549"
-			(at 146.05 100.33 0)
+			(at 148.082 94.488 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3987,6 +4809,72 @@
 			(project "FennecModem"
 				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
 					(reference "U201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 118.11 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fbc92285-d5dc-4ea5-94e0-b12af360fec8")
+		(property "Reference" "TP2"
+			(at 118.872 90.678 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "H/L"
+			(at 118.872 92.202 0)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Bridge_Pitch2.0mm_Drill0.7mm"
+			(at 123.19 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 118.11 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "866c7304-3c8e-48cd-ae17-96d43037d614")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9/cf3d0f33-271b-4df1-9d86-6d97bc01010a"
+					(reference "TP2")
 					(unit 1)
 				)
 			)
