@@ -1947,7 +1947,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_BJT:2N3906"
+		(symbol "Transistor_BJT:MMBT3906"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -1964,7 +1964,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "2N3906"
+			(property "Value" "MMBT3906"
 				(at 5.08 0 0)
 				(effects
 					(font
@@ -1973,7 +1973,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 				(at 5.08 -1.905 0)
 				(effects
 					(font
@@ -1984,7 +1984,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF"
+			(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/pzt3906-d.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1994,7 +1994,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "-0.2A Ic, -40V Vce, Small Signal PNP Transistor, TO-92"
+			(property "Description" "-0.2A Ic, -40V Vce, Small Signal PNP Transistor, SOT-23"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2012,7 +2012,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TO?92*"
+			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2021,7 +2021,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "2N3906_0_1"
+			(symbol "MMBT3906_0_1"
 				(polyline
 					(pts
 						(xy -2.54 0) (xy 0.635 0)
@@ -2094,7 +2094,7 @@
 					)
 				)
 			)
-			(symbol "2N3906_1_1"
+			(symbol "MMBT3906_1_1"
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -2105,7 +2105,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2141,7 +2141,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2738,10 +2738,6 @@
 	(no_connect
 		(at 45.72 124.46)
 		(uuid "46279427-c940-4307-b863-dd3e769e5e86")
-	)
-	(no_connect
-		(at 91.44 162.56)
-		(uuid "4b02bcea-7ba6-4047-af1c-2847e0cc7995")
 	)
 	(no_connect
 		(at 45.72 137.16)
@@ -3353,6 +3349,16 @@
 	)
 	(wire
 		(pts
+			(xy 91.44 162.56) (xy 119.38 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d79e1947-e6cd-4aa9-858c-83745bafc217")
+	)
+	(wire
+		(pts
 			(xy 185.42 21.59) (xy 201.93 21.59)
 		)
 		(stroke
@@ -3640,6 +3646,16 @@
 			(justify right bottom)
 		)
 		(uuid "770c24d6-aefe-43a7-b119-50d6937fc475")
+	)
+	(label "FAN"
+		(at 119.38 162.56 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7a9c1aa3-c70b-4fd9-a51d-74fe88cb12e7")
 	)
 	(label "SPI3"
 		(at 119.38 144.78 180)
@@ -4444,82 +4460,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:2N3906")
-		(at 260.35 106.68 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5f76f215-a252-4e78-acf1-1db00bca0809")
-		(property "Reference" "Q1"
-			(at 255.27 105.4099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2N3906"
-			(at 255.27 107.9499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 255.27 104.775 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF"
-			(at 260.35 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "-0.2A Ic, -40V Vce, Small Signal PNP Transistor, TO-92"
-			(at 260.35 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b0b0ae30-26ca-42d0-9b8e-ec9adae4717c")
-		)
-		(pin "3"
-			(uuid "8dd64307-4fea-408b-9d28-e48a362b474b")
-		)
-		(pin "1"
-			(uuid "9ab5dc71-b21c-4d5d-89e1-0da5e4e33424")
-		)
-		(instances
-			(project ""
-				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Jumper:SolderJumper_2_Open")
 		(at 107.95 147.32 180)
 		(unit 1)
@@ -4786,6 +4726,82 @@
 			(project "FennecModem"
 				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9"
 					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBT3906")
+		(at 260.35 106.68 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "927ca657-88f1-4428-ae4b-5c08ef3f7474")
+		(property "Reference" "Q3"
+			(at 255.27 105.4099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBT3906"
+			(at 255.27 107.9499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 255.27 104.775 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/pzt3906-d.pdf"
+			(at 260.35 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "-0.2A Ic, -40V Vce, Small Signal PNP Transistor, SOT-23"
+			(at 260.35 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d2361075-1e1d-4fac-9713-d9111cba0546")
+		)
+		(pin "3"
+			(uuid "c34205a7-e840-476f-8854-de585e9fac11")
+		)
+		(pin "1"
+			(uuid "a45addad-0b71-4014-817f-e6c39efaf73c")
+		)
+		(instances
+			(project ""
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9"
+					(reference "Q3")
 					(unit 1)
 				)
 			)
