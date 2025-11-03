@@ -62,7 +62,7 @@ jobs:
     strategy:
       matrix:
         variant:
-          - Buisness Card
+          - FennecModem
 
     steps:
       # Be in our repo
@@ -71,11 +71,7 @@ jobs:
           fetch-depth: 0
 
       # Download artifacts
-      # - uses: actions/download-artifact@v3
-      #   with:
-      #     name: Board-Manual
-
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: ${{ matrix.variant }}
 
