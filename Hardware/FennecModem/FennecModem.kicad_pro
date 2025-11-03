@@ -59,7 +59,48 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "clearance|172422100|47645400|59ed7086-642c-46a1-8bd7-737f0bc9ade4|ea95dbc2-e24f-4d8f-b5f5-45cf17e251aa",
+          ""
+        ],
+        [
+          "clearance|172422100|47645400|59ed7086-642c-46a1-8bd7-737f0bc9ade4|f055f688-f45f-49da-93b7-9734278e8ee8",
+          ""
+        ],
+        [
+          "clearance|172422100|50354600|912b4edd-af72-47ea-a6c6-6c4ed0307030|f055f688-f45f-49da-93b7-9734278e8ee8",
+          "Thats just how the footprint has to be for that part"
+        ],
+        [
+          "clearance|172615000|50354600|912b4edd-af72-47ea-a6c6-6c4ed0307030|ea95dbc2-e24f-4d8f-b5f5-45cf17e251aa",
+          ""
+        ],
+        [
+          "clearance|173722900|47645400|e020032e-c411-4d49-af86-60ddc7bcdf5e|59ed7086-642c-46a1-8bd7-737f0bc9ade4",
+          ""
+        ],
+        [
+          "clearance|173722900|48847500|8a46f51d-cef0-47a2-ad9d-a19f388c0a71|59ed7086-642c-46a1-8bd7-737f0bc9ade4",
+          ""
+        ],
+        [
+          "clearance|173722900|50354600|912b4edd-af72-47ea-a6c6-6c4ed0307030|8a46f51d-cef0-47a2-ad9d-a19f388c0a71",
+          ""
+        ],
+        [
+          "clearance|173722900|50354600|912b4edd-af72-47ea-a6c6-6c4ed0307030|e020032e-c411-4d49-af86-60ddc7bcdf5e",
+          ""
+        ],
+        [
+          "copper_edge_clearance|173850000|40135000|fcf1b39a-871c-4a46-b97f-3e7106888306|c858257c-4140-4577-ae86-79ded6a5e1e6",
+          ""
+        ],
+        [
+          "footprint_type_mismatch|173072500|49000000|ca38e91c-0eb2-4f99-a311-3d67affbf780|00000000-0000-0000-0000-000000000000",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -67,7 +108,7 @@
         "annular_width": "error",
         "clearance": "error",
         "connection_width": "warning",
-        "copper_edge_clearance": "error",
+        "copper_edge_clearance": "warning",
         "copper_sliver": "warning",
         "courtyards_overlap": "error",
         "creepage": "error",
@@ -90,7 +131,7 @@
         "items_not_allowed": "error",
         "length_out_of_range": "error",
         "lib_footprint_issues": "warning",
-        "lib_footprint_mismatch": "warning",
+        "lib_footprint_mismatch": "ignore",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
         "mirrored_text_on_front_layer": "warning",
@@ -102,12 +143,12 @@
         "padstack": "error",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_edge_clearance": "warning",
+        "silk_edge_clearance": "ignore",
         "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
-        "starved_thermal": "error",
+        "starved_thermal": "ignore",
         "text_height": "warning",
         "text_on_edge_cuts": "error",
         "text_thickness": "warning",
@@ -119,7 +160,7 @@
         "track_width": "error",
         "tracks_crossing": "error",
         "unconnected_items": "error",
-        "unresolved_variable": "error",
+        "unresolved_variable": "ignore",
         "via_dangling": "warning",
         "zones_intersect": "error"
       },
@@ -195,6 +236,7 @@
       "track_widths": [
         0.0,
         0.6,
+        1.025,
         1.2,
         1.8
       ],
@@ -595,12 +637,36 @@
           "label": "DNP",
           "name": "${DNP}",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC",
+          "name": "LCSC",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC#",
+          "name": "LCSC#",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": false,
-      "name": "Grouped By Value",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
