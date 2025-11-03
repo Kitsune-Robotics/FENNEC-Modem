@@ -51,45 +51,6 @@ jobs:
           webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
           args: "Building new board failed, most likely a DRC check."
 
-  dev-publish:
-    # publish only to devs
-    runs-on: ubuntu-latest
-    name: Dev-Publish
-    # needs: [make_docs, KiCad_Hardware]
-    needs: [KiCad_Hardware]
-
-    strategy:
-      matrix:
-        variant:
-          - FennecModem
-          - BackPlane
-
-    steps:
-      # Download artifacts
-      # - uses: actions/download-artifact@v3
-      #   with:
-      #     name: Board-Manual
-
-      - uses: actions/download-artifact@v3
-        with:
-          name: ${{ matrix.variant }}
-
-      # - name: send custom message with args
-      #   uses: appleboy/discord-action@master
-      #   with:
-      #     webhook_id: ${{ secrets.WEBHOOK_ID }}
-      #     webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-      #     file: "Board-Manual.pdf"
-      #     args: Display Board Just got an update!
-
-      - name: send custom message with args
-        uses: appleboy/discord-action@master
-        with:
-          webhook_id: ${{ secrets.WEBHOOK_ID }}
-          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-          file: "${{ matrix.variant }}-3D_top.png"
-          args: ${{ matrix.variant }}
-
   publish:
     # Only run on tags
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
