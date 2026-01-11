@@ -93,8 +93,24 @@
           ""
         ],
         [
+          "copper_edge_clearance|169600000|40135000|fcf1b39a-871c-4a46-b97f-3e7106888306|7d29f510-99df-400d-9066-a2f2233228b6",
+          "Has to go off board"
+        ],
+        [
+          "copper_edge_clearance|169600000|40135000|fcf1b39a-871c-4a46-b97f-3e7106888306|fc79cb22-abba-4ac7-b533-66dd8387c2c5",
+          "Has to go off board"
+        ],
+        [
           "copper_edge_clearance|173850000|40135000|fcf1b39a-871c-4a46-b97f-3e7106888306|c858257c-4140-4577-ae86-79ded6a5e1e6",
           ""
+        ],
+        [
+          "copper_edge_clearance|178100000|40135000|fcf1b39a-871c-4a46-b97f-3e7106888306|30c9fbcf-8e6c-4c09-acf1-05da26a58283",
+          "Has to go off board"
+        ],
+        [
+          "copper_edge_clearance|178100000|40135000|fcf1b39a-871c-4a46-b97f-3e7106888306|5b338b37-9a0f-425f-a18a-78ed4a8af764",
+          "Has to go off boardf"
         ],
         [
           "footprint_type_mismatch|173072500|49000000|ca38e91c-0eb2-4f99-a311-3d67affbf780|00000000-0000-0000-0000-000000000000",
@@ -178,7 +194,7 @@
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
-        "min_text_height": 0.8,
+        "min_text_height": 0.6,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.2,
