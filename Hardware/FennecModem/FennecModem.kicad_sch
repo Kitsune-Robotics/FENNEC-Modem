@@ -12,6 +12,146 @@
 		(comment 4 "${FULL_REVISION}")
 	)
 	(lib_symbols
+		(symbol "Device:C_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3302)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:LED"
 			(pin_numbers
 				(hide yes)
@@ -2514,6 +2654,17 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Reccomended\nto prevent\nnoise on RX"
+		(exclude_from_sim no)
+		(at 270.256 93.218 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "352dfb5e-b7f1-4776-a4ef-232f793aeb39")
+	)
 	(text "Human Interface"
 		(exclude_from_sim no)
 		(at 238.125 126.365 0)
@@ -2526,10 +2677,22 @@
 		(uuid "b9188638-a64a-4ade-9fd1-f834437c62f5")
 	)
 	(junction
+		(at 257.81 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2d5115d0-ce46-44ef-b6e0-c3aa12551ad5")
+	)
+	(junction
 		(at 73.66 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d0f22fae-8518-4fda-8d8d-185189c4aa5d")
+	)
+	(junction
+		(at 257.81 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "de9e7934-a1e2-41b1-b3d5-b7536eeadb03")
 	)
 	(junction
 		(at 95.25 168.91)
@@ -2773,7 +2936,7 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 96.52) (xy 257.81 101.6)
+			(xy 257.81 96.52) (xy 257.81 97.79)
 		)
 		(stroke
 			(width 0)
@@ -2873,7 +3036,7 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 80.01) (xy 257.81 83.82)
+			(xy 257.81 80.01) (xy 257.81 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2993,6 +3156,16 @@
 	)
 	(wire
 		(pts
+			(xy 257.81 97.79) (xy 269.24 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "945147c4-ae71-4881-bca5-395a140edc41")
+	)
+	(wire
+		(pts
 			(xy 275.59 157.48) (xy 275.59 158.75)
 		)
 		(stroke
@@ -3063,6 +3236,16 @@
 	)
 	(wire
 		(pts
+			(xy 269.24 97.79) (xy 269.24 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1461768-334f-4982-8124-666d503282c1")
+	)
+	(wire
+		(pts
 			(xy 245.11 27.94) (xy 255.27 27.94)
 		)
 		(stroke
@@ -3120,6 +3303,36 @@
 			(type default)
 		)
 		(uuid "cc2fba30-1b25-4677-abca-8a15cb8a0eb1")
+	)
+	(wire
+		(pts
+			(xy 257.81 97.79) (xy 257.81 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d068a991-e0a5-4032-9ab2-2655bed30717")
+	)
+	(wire
+		(pts
+			(xy 269.24 87.63) (xy 269.24 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d22b07c6-bb68-4ac3-b623-40a1a72d6f46")
+	)
+	(wire
+		(pts
+			(xy 269.24 82.55) (xy 257.81 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d60c5003-144f-4012-8274-ef182ccf27f1")
 	)
 	(wire
 		(pts
@@ -3230,6 +3443,16 @@
 			(type default)
 		)
 		(uuid "e63b1845-7e4f-42f8-852b-17c31a57f2d3")
+	)
+	(wire
+		(pts
+			(xy 257.81 82.55) (xy 257.81 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed93dddd-2750-4682-9a4f-3bed4c08a3e1")
 	)
 	(label "STAT"
 		(at 280.67 135.89 180)
@@ -4741,6 +4964,75 @@
 			(project "FennecModem"
 				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9"
 					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 269.24 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d9dcc5fb-72ff-4b55-ac69-3f43ad4f61d7")
+		(property "Reference" "C1"
+			(at 271.78 88.9062 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1μf"
+			(at 271.78 91.4462 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 269.24 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 269.24 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 269.24 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "865d3fee-508e-482d-a641-8bda8236cc24")
+		)
+		(pin "2"
+			(uuid "56b9a2f9-b9cd-4c12-acf4-4eb52b66e758")
+		)
+		(instances
+			(project "FennecModem"
+				(path "/8cb1f8f8-0f28-4c6f-8a0b-e6b064917aa9"
+					(reference "C1")
 					(unit 1)
 				)
 			)
