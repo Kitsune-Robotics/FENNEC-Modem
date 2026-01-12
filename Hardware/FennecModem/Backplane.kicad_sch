@@ -4071,6 +4071,17 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Solder this bypass\nand DNP inverter\ndriver if CARD_EN\nis HIGH for disable"
+		(exclude_from_sim no)
+		(at 199.898 74.168 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "25b00fad-5b2d-4d8b-a52b-36cf2a889293")
+	)
 	(text "5V/2kohm = 2.5mA"
 		(exclude_from_sim no)
 		(at 240.538 62.23 0)
