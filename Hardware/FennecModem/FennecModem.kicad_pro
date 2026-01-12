@@ -671,7 +671,7 @@
           "group_by": false,
           "label": "LCSC#",
           "name": "LCSC#",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -755,5 +755,10 @@
       "Audio Processing"
     ]
   ],
-  "text_variables": {}
+  "text_variables": {
+    "FULL_REVISION": "v1.0-RC2-4-g77f4bcc",
+    "ISSUE": "2026-01-12",
+    "KENWOODFOX_3DMODELS": "Hardware/FennecModem/Libraries/kenwoodfox-kicad-libraries/3d",
+    "REVISION": "77f4bcc"
+  }
 }

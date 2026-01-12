@@ -205,13 +205,15 @@ outputs:
       exclude_filter: "only_jlc_parts"
       ref_separator: ","
       columns:
-        - field: Value
-          name: Comment
+        - field: "${QUANTITY}"
+          name: Quantity
+        - field: "LCSC#"
+          name: "LCSC Part #"
+        - field: "Description"
+          name: Description
         - field: References
           name: Designator
         - Footprint
-        - field: "LCSC#"
-          name: "LCSC Part #"
       csv:
         hide_pcb_info: true
         hide_stats_info: true
