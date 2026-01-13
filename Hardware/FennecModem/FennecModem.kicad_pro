@@ -755,10 +755,5 @@
       "Audio Processing"
     ]
   ],
-  "text_variables": {
-    "FULL_REVISION": "v1.0-RC2-4-g77f4bcc",
-    "ISSUE": "2026-01-12",
-    "KENWOODFOX_3DMODELS": "Hardware/FennecModem/Libraries/kenwoodfox-kicad-libraries/3d",
-    "REVISION": "77f4bcc"
-  }
+  "text_variables": {}
 }
