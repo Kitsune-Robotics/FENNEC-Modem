@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name "KenwoodFox")(type "KiCad")(uri "${KIPRJMOD}/Libraries/kenwoodfox-kicad-libraries/libraries/KenwoodFox.kicad_sym")(options "")(descr ""))
-)

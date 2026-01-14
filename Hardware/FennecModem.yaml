@@ -2,12 +2,15 @@ kibot:
   version: 1
 # Look into pcb_replace, looks sick! Also sch_replace
 
+global:
+  kiauto_time_out_scale: 2.0
+  kiauto_wait_start: 5
+
 preflight:
   run_erc: false
   update_xml: true
   run_drc: false
   check_zone_fills: false
-  ignore_unconnected: false
 
   # Replace variables
   set_text_variables:
@@ -42,18 +45,18 @@ outputs:
 
   - name: "3D Models"
     comment: "3D Models"
-    type: step
+    type: export_3d
 
-  - name: "3D Renders"
-    comment: "3D Renders for docs!"
-    type: render_3d
-    options:
-      ray_tracing: true
-      rotate_x: -1
-      rotate_y: 2
-      zoom: 3
-      wait_render: 20
-      width: 500
+  # - name: "3D Renders"
+  #   comment: "3D Renders for docs!"
+  #   type: render_3d
+  #   options:
+  #     ray_tracing: true
+  #     rotate_x: -1
+  #     rotate_y: 2
+  #     zoom: 1
+  #     wait_render: 20
+  #     width: 500
 
   # ======
   # PCBWay
@@ -202,13 +205,15 @@ outputs:
       exclude_filter: "only_jlc_parts"
       ref_separator: ","
       columns:
-        - field: Value
-          name: Comment
+        - field: "${QUANTITY}"
+          name: Quantity
+        - field: "LCSC#"
+          name: "LCSC Part #"
+        - field: "Description"
+          name: Description
         - field: References
           name: Designator
         - Footprint
-        - field: "LCSC#"
-          name: "LCSC Part #"
       csv:
         hide_pcb_info: true
         hide_stats_info: true
