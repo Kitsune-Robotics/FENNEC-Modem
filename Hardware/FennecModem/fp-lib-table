@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "KenwoodFox")(type "KiCad")(uri "${KIPRJMOD}/Libraries/kenwoodfox-kicad-libraries/footprints/KenwoodFox.pretty")(options "")(descr ""))
   (lib (name "MCU_RaspberryPi_and_Boards")(type "KiCad")(uri "${KIPRJMOD}/Libraries/KiCad-RP-Pico/RP-Pico Libraries/MCU_RaspberryPi_and_Boards.pretty")(options "")(descr ""))
+  (lib (name "fennec")(type "KiCad")(uri "${KIPRJMOD}/Libraries/fennec-modem-libraries/fennec.pretty")(options "")(descr ""))
 )
